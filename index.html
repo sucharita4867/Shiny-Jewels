@@ -5,10 +5,111 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Shiny Jewels</title>
+
+      <script src="https://cdn.tailwindcss.com"></script>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+      <style>
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+            * {
+                  margin: 0;
+                  padding: 0;
+                  box-sizing: border-box;
+            }
+
+            .playfair-font {
+                  font-family: "Playfair Display", serif;
+            }
+
+            .raleway-font {
+                  font-family: "Raleway", sans-serif;
+            }
+      </style>
 </head>
 
-<body>
+<body class="bg-gray-100 min-h-screen">
+      <header class="w-full">
+            <!-- Top Bar Section -->
+            <section
+                  class="w-full bg-[#1c0003] border-b border-[#4d0c14] relative bg-center bg-cover px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-5"
+                  style="background-image: url('images/top-bar-img/topbar-bg.png');">
 
+                  <!-- Flex Container -->
+                  <div
+                        class="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 relative min-h-[52px]">
+
+                        <!-- Left: Address Capsule -->
+                        <div
+                              class="flex items-center gap-2.5 bg-[#470018]/90 border border-[#eebe62]/90 px-4 py-1.5 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] shrink-0 z-10 order-2 md:order-1 p-4">
+                              <i class="fa-solid fa-location-dot text-[#eebe62] text-sm shrink-0"></i>
+                              <span
+                                    class="raleway-font text-[#e0cfc8] text-xs md:text-[13px] font-normal tracking-wide whitespace-nowrap">
+                                    Jadupur, Purba Medinipur, West Bengal - 721641
+                              </span>
+                        </div>
+
+                        <!-- Center: Ornate Gold Frame & Tagline (Perfect Fit, No Overflow) -->
+                        <div
+                              class="order-1 md:order-2 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 relative flex items-center justify-center w-[260px] sm:w-[300px] md:w-[340px] pointer-events-none z-10 shrink-0 ">
+
+                              <!-- Ornate Frame Image -->
+                              <img src="images/top-bar-img/top-frame.png" alt="Ornate Frame"
+                                    class="w-full h-auto block filter drop-shadow">
+
+                              <!-- Center Text perfectly inside frame bounds -->
+                              <span
+                                    class="absolute inset-0 flex items-center justify-center text-[8.5px] sm:text-[10px] md:text-[11px] text-[#fbf0dc] raleway-font font-medium tracking-wide whitespace-nowrap px-8 select-none">
+                                    Timeless Beauty. Precious Forever.
+                              </span>
+
+                        </div>
+
+                        <!-- Right: Contact & Socials Capsule -->
+                        <div
+                              class="flex items-center gap-3 bg-[#470018]/90 border border-[#eebe62]/90 px-4 py-1.5 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] shrink-0 z-10 order-3">
+
+                              <!-- Phone -->
+                              <a href="tel:7047119767"
+                                    class="flex items-center gap-1.5 text-[#e0cfc8] hover:text-[#eebe62] transition-colors">
+                                    <i class="fa-solid fa-phone text-[#eebe62] text-xs"></i>
+                                    <span
+                                          class="raleway-font text-xs md:text-[13px] font-normal tracking-wider">7047119767</span>
+                              </a>
+
+                              <!-- Divider -->
+                              <span class="text-[#eebe62]/50 text-sm select-none">|</span>
+
+                              <!-- Socials -->
+                              <div class="flex items-center gap-2">
+                                    <span class="raleway-font text-[#cbb6ad] text-xs hidden lg:inline font-light">Follow
+                                          Us:</span>
+
+                                    <!-- Facebook -->
+                                    <a href="#"
+                                          class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[11px]">
+                                          <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+
+                                    <!-- Instagram -->
+                                    <a href="#"
+                                          class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[11px]">
+                                          <i class="fa-brands fa-instagram"></i>
+                                    </a>
+
+                                    <!-- YouTube -->
+                                    <a href="#"
+                                          class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[10px]">
+                                          <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                              </div>
+
+                        </div>
+
+                  </div>
+            </section>
+      </header>
 </body>
 
 </html>
