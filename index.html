@@ -30,16 +30,15 @@
 </head>
 
 <body class="bg-gray-100 min-h-screen">
-      <header class="w-full">
+      <!-- HEADER START -->
+      <header class="w-full relative z-10">
             <!-- Top Bar Section -->
             <section
                   class="w-full bg-[#1c0003] border-b border-[#4d0c14] relative bg-center bg-cover px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-5"
                   style="background-image: url('images/top-bar-img/topbar-bg.png');">
 
-                  <!-- Flex Container -->
                   <div
                         class="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 relative min-h-[52px]">
-
                         <!-- Left: Address Capsule -->
                         <div
                               class="flex items-center gap-2.5 bg-[#470018]/90 border border-[#eebe62]/90 px-4 py-1.5 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] shrink-0 z-10 order-2 md:order-1 p-4">
@@ -50,65 +49,47 @@
                               </span>
                         </div>
 
-                        <!-- Center: Ornate Gold Frame & Tagline (Perfect Fit, No Overflow) -->
+                        <!-- Center: Ornate Gold Frame & Tagline -->
                         <div
-                              class="order-1 md:order-2 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 relative flex items-center justify-center w-[260px] sm:w-[300px] md:w-[340px] pointer-events-none z-10 shrink-0 ">
-
-                              <!-- Ornate Frame Image -->
+                              class="order-1 md:order-2 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 relative flex items-center justify-center w-[260px] sm:w-[300px] md:w-[340px] pointer-events-none z-10 shrink-0">
                               <img src="images/top-bar-img/top-frame.png" alt="Ornate Frame"
                                     class="w-full h-auto block filter drop-shadow">
-
-                              <!-- Center Text perfectly inside frame bounds -->
                               <span
                                     class="absolute inset-0 flex items-center justify-center text-[8.5px] sm:text-[10px] md:text-[11px] text-[#fbf0dc] raleway-font font-medium tracking-wide whitespace-nowrap px-8 select-none">
                                     Timeless Beauty. Precious Forever.
                               </span>
-
                         </div>
 
                         <!-- Right: Contact & Socials Capsule -->
                         <div
                               class="flex items-center gap-3 bg-[#470018]/90 border border-[#eebe62]/90 px-4 py-1.5 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] shrink-0 z-10 order-3">
-
-                              <!-- Phone -->
                               <a href="tel:7047119767"
                                     class="flex items-center gap-1.5 text-[#e0cfc8] hover:text-[#eebe62] transition-colors">
                                     <i class="fa-solid fa-phone text-[#eebe62] text-xs"></i>
                                     <span
                                           class="raleway-font text-xs md:text-[13px] font-normal tracking-wider">7047119767</span>
                               </a>
-
-                              <!-- Divider -->
                               <span class="text-[#eebe62]/50 text-sm select-none">|</span>
-
-                              <!-- Socials -->
                               <div class="flex items-center gap-2">
                                     <span class="raleway-font text-[#cbb6ad] text-xs hidden lg:inline font-light">Follow
                                           Us:</span>
-
-                                    <!-- Facebook -->
                                     <a href="#"
                                           class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[11px]">
                                           <i class="fa-brands fa-facebook-f"></i>
                                     </a>
-
-                                    <!-- Instagram -->
                                     <a href="#"
                                           class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[11px]">
                                           <i class="fa-brands fa-instagram"></i>
                                     </a>
-
-                                    <!-- YouTube -->
                                     <a href="#"
                                           class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[10px]">
                                           <i class="fa-brands fa-youtube"></i>
                                     </a>
                               </div>
-
                         </div>
-
                   </div>
             </section>
+
             <!-- Navbar section -->
             <nav class="w-full relative bg-[#faeedb] bg-no-repeat bg-[length:100%_100%] border-b border-[#e2caa0]/60 select-none"
                   style="background-image: url('images/navbar-img/navbar-bg.png');">
@@ -117,8 +98,6 @@
 
                         <!-- Left Menu -->
                         <div class="hidden lg:flex items-center gap-5 xl:gap-7">
-
-                              <!-- Home Button -->
                               <a href="#"
                                     class="relative flex items-center justify-center w-[95px] xl:w-[105px] h-[36px] transition-transform hover:scale-105 shrink-0">
                                     <img src="images/navbar-img/btn-bg.png" alt="Home"
@@ -127,13 +106,11 @@
                                           class="relative z-10 text-white raleway-font font-medium text-[13.5px] tracking-wide pt-0.5">Home</span>
                               </a>
 
-                              <!-- Links -->
                               <div
                                     class="flex items-center gap-3.5 xl:gap-5 text-[#951416] raleway-font font-medium text-[14px] xl:text-[15px]">
                                     <a href="#" class="hover:text-[#8e1b26] transition-colors whitespace-nowrap">About
                                           us</a>
                                     <span class="text-[#da0f12]/80 select-none">|</span>
-
                                     <div
                                           class="relative group cursor-pointer flex items-center gap-1 hover:text-[#8e1b26] transition-colors whitespace-nowrap">
                                           <span>Collections</span>
@@ -141,16 +118,14 @@
                                                 class="fa-solid fa-chevron-down text-[9px] text-[#951416] group-hover:rotate-180 transition-transform duration-200"></i>
                                     </div>
                                     <span class="text-[#da0f12]/80 select-none">|</span>
-
                                     <a href="#" class="hover:text-[#8e1b26] transition-colors whitespace-nowrap">Gold
                                           Rate</a>
                               </div>
-
                         </div>
 
                         <!-- Center: Overlapping Circular Logo -->
                         <div
-                              class="absolute left-1/2 top-0 -translate-x-1/2 z-30 flex items-center justify-center pointer-events-auto">
+                              class="absolute left-1/2 top-0 -translate-x-1/2 z-20 flex items-center justify-center pointer-events-auto">
                               <a href="#"
                                     class="w-[82px] h-[82px] sm:w-[96px] sm:h-[96px] md:w-[110px] md:h-[110px] rounded-full bg-white shadow-[0_8px_20px_rgba(0,0,0,0.18)] border-[2.5px] border-[#ecd29f] p-2 flex items-center justify-center transition-transform hover:scale-105">
                                     <img src="images/navbar-img/PUSHPAM JEWELLERS LOGO (1) 2.png"
@@ -160,27 +135,20 @@
 
                         <!-- Right Menu & Actions -->
                         <div class="hidden lg:flex items-center gap-5 xl:gap-7">
-
-                              <!-- Links -->
                               <div
                                     class="flex items-center gap-3.5 xl:gap-5 text-[#951416] raleway-font font-medium text-[14px] xl:text-[15px]">
                                     <a href="#"
                                           class="hover:text-[#8e1b26] transition-colors whitespace-nowrap">Customer
                                           Jewellery</a>
                                     <span class="text-[#da0f12]/80 select-none">|</span>
-
                                     <a href="#"
                                           class="hover:text-[#8e1b26] transition-colors whitespace-nowrap">Gallery</a>
                                     <span class="text-[#da0f12]/80 select-none">|</span>
-
                                     <a href="#" class="hover:text-[#8e1b26] transition-colors whitespace-nowrap">Contact
                                           Us</a>
                               </div>
 
-                              <!-- Icons -->
                               <div class="flex items-center gap-4 pl-3">
-
-                                    <!-- Search Icon -->
                                     <button class="text-[#7d111d] hover:text-[#dfa135] transition-colors p-1"
                                           title="Search">
                                           <svg class="w-6 h-6 stroke-current stroke-[2.2] fill-none"
@@ -191,52 +159,239 @@
                                           </svg>
                                     </button>
 
-                                    <!-- Custom Login Icon with Floating Gold Badge -->
                                     <a href="#"
                                           class="relative flex flex-col items-center group transition-transform hover:scale-105 pt-1"
                                           title="Login">
-
-                                          <!-- Login SVG Icon (Arrow entering arc) -->
                                           <svg class="w-7 h-7 text-[#7d111d] fill-none stroke-current stroke-[2.5]"
                                                 viewBox="0 0 28 28">
-                                                <!-- Entering Arrow -->
                                                 <line x1="4" y1="14" x2="19" y2="14" stroke-linecap="round"></line>
                                                 <polyline points="14 9 19 14 14 19" stroke-linecap="round"
                                                       stroke-linejoin="round"></polyline>
-                                                <!-- Right Outer Arc -->
                                                 <path d="M 18 5 A 10 10 0 0 1 18 23" stroke-linecap="round"></path>
                                           </svg>
-
-                                          <!-- Floating Golden Login Pill Badge -->
                                           <span
                                                 class="absolute top-[26px] bg-gradient-to-b from-[#e5aa42] to-[#bf7e1b] text-[#1a0004] text-[10px] font-semibold tracking-tight px-2 py-0.5 rounded-full shadow-[0_3px_6px_rgba(0,0,0,0.25)] whitespace-nowrap raleway-font z-20">
                                                 Login
                                           </span>
                                     </a>
-
                               </div>
                         </div>
 
-                        <!-- Mobile & Tablet Layout -->
+                        <!-- Mobile Menu Hamburger -->
                         <div class="flex lg:hidden items-center justify-between w-full">
                               <button class="text-[#951416] text-xl p-1 focus:outline-none" aria-label="Open Menu">
                                     <i class="fa-solid fa-bars"></i>
                               </button>
-
                               <div class="flex items-center gap-3.5">
-                                    <button class="text-[#951416] text-base">
-                                          <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
+                                    <button class="text-[#951416] text-base"><i
+                                                class="fa-solid fa-magnifying-glass"></i></button>
                                     <a href="#" class="flex flex-col items-center text-[#951416]">
                                           <i class="fa-solid fa-arrow-right-to-bracket text-base"></i>
                                           <span class="text-[8px] font-bold uppercase">LOGIN</span>
                                     </a>
                               </div>
                         </div>
-
                   </div>
             </nav>
       </header>
+      <!-- MAIN BANNER & TRUST SECTION START -->
+      <main class="w-full relative bg-[#faedd8] select-none pb-20 sm:pb-24 lg:pb-28 overflow-visible">
+
+            <!-- Hero Banner Background Container -->
+            <section
+                  class="w-full relative min-h-[580px] sm:min-h-[640px] lg:min-h-[690px] flex items-center pt-8 pb-16 lg:pb-20">
+
+                  <!-- Background Silk/Texture -->
+                  <div class="absolute inset-0 w-full h-full bg-cover bg-center overflow-hidden pointer-events-none z-0"
+                        style="background-image: url('images/banner-img/banner-bg.png');">
+                  </div>
+
+                  <!-- Top Lotus Golden Arch Divider -->
+                  <div
+                        class="absolute -top-[12px] sm:-top-[16px] md:-top-[22px] lg:-top-[26px] left-0 right-0 w-full flex items-center justify-center z-20 pointer-events-none">
+                        <img src="images/banner-img/banner-head-style.png" alt="Ornate Lotus Arch"
+                              class="w-[96%] max-w-[1380px] h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.18)]">
+                  </div>
+
+                  <!-- Soft Red Glow Behind Model -->
+                  <div
+                        class="absolute right-[8%] lg:right-[12%] top-1/2 -translate-y-1/2 w-[320px] sm:w-[440px] lg:w-[540px] h-[320px] sm:h-[440px] lg:h-[540px] rounded-full bg-[#df6c6c]/25 blur-3xl pointer-events-none z-0">
+                  </div>
+
+                  <!-- Main Content Grid -->
+                  <div
+                        class="max-w-[1380px] w-full mx-auto px-6 sm:px-10 lg:px-14 relative z-10 flex flex-col lg:flex-row items-center justify-between h-full">
+
+                        <!-- Left Column: Typography Block & CTA -->
+                        <div class="w-full lg:w-[55%] flex flex-col items-center text-center z-10 pt-4 lg:pt-0">
+
+                              <!-- Where Tradition Golden Bracket -->
+                              <div
+                                    class="relative flex items-center justify-center w-[230px] sm:w-[270px] md:w-[290px] h-[46px] sm:h-[52px] mb-3">
+                                    <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Frame"
+                                          class="absolute inset-0 w-full h-full object-contain pointer-events-none">
+                                    <span
+                                          class="relative z-10 playfair-font font-bold text-[#140003] text-[17px] sm:text-[20px] md:text-[22px] tracking-wide pt-0.5">
+                                          Where Tradition
+                                    </span>
+                              </div>
+
+                              <!-- Headline -->
+                              <h1
+                                    class="playfair-font text-[42px] sm:text-[56px] md:text-[66px] lg:text-[74px] leading-[1.06] text-[#82141e] font-normal tracking-tight mb-4 sm:mb-5">
+                                    Meets Timeless <br>
+                                    <span class="font-normal block mt-1">Elegance</span>
+                              </h1>
+
+                              <!-- Subtitle -->
+                              <p
+                                    class="raleway-font text-[14px] sm:text-[16px] md:text-[17px] text-[#2b0005] font-medium tracking-normal max-w-[480px] mb-7 sm:mb-8 leading-relaxed">
+                                    Exquisite Gold Jewellery, Crafted for Every Precious Moment.
+                              </p>
+
+                              <!-- CTA Explore Collections Button -->
+                              <a href="#"
+                                    class="relative inline-flex items-center justify-center w-[190px] sm:w-[210px] h-[46px] sm:h-[50px] group transition-transform duration-200 hover:scale-105">
+                                    <img src="images/navbar-img/btn-bg.png" alt="Explore Collections"
+                                          class="absolute inset-0 w-full h-full object-fill drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
+                                    <span
+                                          class="relative z-10 text-[#fdf4db] raleway-font font-semibold text-[11px] sm:text-[12px] uppercase tracking-[0.15em] pt-0.5">
+                                          Explore Collections
+                                    </span>
+                              </a>
+
+                        </div>
+
+                        <!-- Right Column: Model & Carousel Controls -->
+                        <div
+                              class="w-full lg:w-[45%] flex items-end justify-center lg:justify-end relative mt-6 lg:mt-0 z-20 h-[440px] sm:h-[540px] lg:h-[620px]">
+
+                              <!-- Model Image (Extends into the trust bar overlap) -->
+                              <div
+                                    class="relative w-[340px] sm:w-[440px] md:w-[500px] lg:w-[550px] h-full flex items-end justify-center pointer-events-none z-20">
+                                    <img src="images/banner-img/banner-model.png" alt="Jewellery Model"
+                                          class="w-full h-full object-contain object-bottom block drop-shadow-[-12px_12px_28px_rgba(0,0,0,0.22)]">
+                              </div>
+
+                              <!-- Vertical Carousel Arrows -->
+                              <div
+                                    class="absolute right-0 sm:right-2 top-[45%] -translate-y-1/2 z-40 flex flex-col gap-3 pointer-events-auto">
+                                    <button
+                                          class="w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] rounded-full bg-[#82141e] hover:bg-[#991824] text-[#ffdf9e] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.35)] border border-[#e5ba65] transition-transform hover:scale-110"
+                                          aria-label="Previous slide">
+                                          <i class="fa-solid fa-arrow-up text-xs sm:text-sm"></i>
+                                    </button>
+                                    <button
+                                          class="w-[34px] h-[34px] sm:w-[38px] sm:h-[38px] rounded-full bg-[#82141e] hover:bg-[#991824] text-[#ffdf9e] flex items-center justify-center shadow-[0_4px_10px_rgba(0,0,0,0.35)] border border-[#e5ba65] transition-transform hover:scale-110"
+                                          aria-label="Next slide">
+                                          <i class="fa-solid fa-arrow-down text-xs sm:text-sm"></i>
+                                    </button>
+                              </div>
+
+                        </div>
+
+                  </div>
+
+            </section>
+
+            <!-- Peacock Feather (Palak) - Positioned on Left Overlaying the Trust Card -->
+            <!-- <div
+                  class="absolute -bottom-8 sm:-bottom-12 md:-bottom-16 lg:-bottom-20 -left-4 sm:-left-6 lg:-left-8 w-[200px] sm:w-[260px] md:w-[320px] lg:w-[390px] pointer-events-none z-30">
+                  <img src="images/banner-img/palak.png" alt="Peacock Feather"
+                        class="w-full h-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.28)]">
+            </div> -->
+
+            <!-- Half-Overlapping Maroon Trust Badges Container -->
+            <div
+                  class="absolute -bottom-[70px] sm:-bottom-[80px] lg:-bottom-[90px] left-0 right-0 w-full max-w-[1140px] mx-auto px-4 sm:px-6 z-20">
+
+                  <!-- Main Maroon Box (Half on banner, half on body) -->
+                  <div class="w-full bg-[#350007] border border-[#6b151e] rounded-[18px] sm:rounded-[22px] shadow-[0_15px_35px_rgba(0,0,0,0.45)] px-4 sm:px-6 lg:px-8 pt-8 sm:pt-9 pb-5 sm:pb-6 relative bg-cover bg-center"
+                        style="background-image: url('images/top-bar-img/topbar-bg.png');">
+
+                        <!-- Top Centered Ornate Golden Bracket (Half on banner, half on card) -->
+                        <div
+                              class="absolute -top-[16px] sm:-top-[20px] left-1/2 -translate-x-1/2 pointer-events-none z-30 w-[240px] sm:w-[280px] md:w-[300px] flex items-center justify-center">
+                              <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Frame"
+                                    class="w-full h-auto object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.3)]">
+                        </div>
+
+                        <!-- 4-Capsule Row Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 items-center">
+
+                              <!-- Badge 1: 100% Hallmarked Jewellery -->
+                              <div
+                                    class="flex items-center gap-3 bg-[#47000b]/90 border border-[#7b1d28]/90 hover:border-[#dfa135] px-4 py-3 sm:py-3.5 rounded-xl shadow-[inset_0_1px_3px_rgba(0,0,0,0.7)] transition-colors duration-200 cursor-default">
+                                    <div
+                                          class="w-[28px] h-[28px] shrink-0 flex items-center justify-center text-[#dfa135] text-base sm:text-lg">
+                                          <i class="fa-regular fa-gem"></i>
+                                    </div>
+                                    <div
+                                          class="raleway-font flex items-center gap-1.5 whitespace-nowrap overflow-hidden">
+                                          <span
+                                                class="text-[#fbe0b3] font-bold text-xs sm:text-[13.5px] tracking-wide">100%</span>
+                                          <span class="text-[#d8c2bb] font-normal text-[11px] sm:text-[12px]">Hallmarked
+                                                Jewellery</span>
+                                    </div>
+                              </div>
+
+                              <!-- Badge 2: Assured Buyback Guarantee -->
+                              <div
+                                    class="flex items-center gap-3 bg-[#47000b]/90 border border-[#7b1d28]/90 hover:border-[#dfa135] px-4 py-3 sm:py-3.5 rounded-xl shadow-[inset_0_1px_3px_rgba(0,0,0,0.7)] transition-colors duration-200 cursor-default">
+                                    <div
+                                          class="w-[28px] h-[28px] shrink-0 flex items-center justify-center text-[#dfa135] text-base sm:text-lg">
+                                          <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <div
+                                          class="raleway-font flex items-center gap-1.5 whitespace-nowrap overflow-hidden">
+                                          <span
+                                                class="text-[#fbe0b3] font-bold text-xs sm:text-[13.5px] tracking-wide">Assured</span>
+                                          <span class="text-[#d8c2bb] font-normal text-[11px] sm:text-[12px]">Buyback
+                                                Guarantee</span>
+                                    </div>
+                              </div>
+
+                              <!-- Badge 3: Exchange Old Gold -->
+                              <div
+                                    class="flex items-center gap-3 bg-[#47000b]/90 border border-[#7b1d28]/90 hover:border-[#dfa135] px-4 py-3 sm:py-3.5 rounded-xl shadow-[inset_0_1px_3px_rgba(0,0,0,0.7)] transition-colors duration-200 cursor-default">
+                                    <div
+                                          class="w-[28px] h-[28px] shrink-0 flex items-center justify-center text-[#dfa135] text-base sm:text-lg">
+                                          <i class="fa-solid fa-arrows-rotate"></i>
+                                    </div>
+                                    <div
+                                          class="raleway-font flex items-center gap-1.5 whitespace-nowrap overflow-hidden">
+                                          <span
+                                                class="text-[#fbe0b3] font-bold text-xs sm:text-[13.5px] tracking-wide">Exchange</span>
+                                          <span class="text-[#d8c2bb] font-normal text-[11px] sm:text-[12px]">Old
+                                                Gold</span>
+                                    </div>
+                              </div>
+
+                              <!-- Badge 4: Secure Shipping -->
+                              <div
+                                    class="flex items-center gap-3 bg-[#47000b]/90 border border-[#7b1d28]/90 hover:border-[#dfa135] px-4 py-3 sm:py-3.5 rounded-xl shadow-[inset_0_1px_3px_rgba(0,0,0,0.7)] transition-colors duration-200 cursor-default">
+                                    <div
+                                          class="w-[28px] h-[28px] shrink-0 flex items-center justify-center text-[#dfa135] text-base sm:text-lg">
+                                          <i class="fa-solid fa-shield-heart"></i>
+                                    </div>
+                                    <div
+                                          class="raleway-font flex items-center gap-1.5 whitespace-nowrap overflow-hidden">
+                                          <span
+                                                class="text-[#fbe0b3] font-bold text-xs sm:text-[13.5px] tracking-wide">Secure</span>
+                                          <span
+                                                class="text-[#d8c2bb] font-normal text-[11px] sm:text-[12px]">Shipping</span>
+                                    </div>
+                              </div>
+
+                        </div>
+                  </div>
+
+            </div>
+
+      </main>
+      <!-- MAIN BANNER & TRUST SECTION END -->
+      <!-- MAIN BANNER & TRUST SECTION END -->
+      <h4 class="p-10"> sucharita sardar</h4>
 </body>
 
 </html>
