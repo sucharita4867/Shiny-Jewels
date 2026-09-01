@@ -567,17 +567,17 @@
                               class="w-full max-w-[1320px] relative flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-0 mt-2">
 
                               <!-- 1. For Her (Left Card) -->
-                              <div class="w-full lg:w-[48%] h-[250px] sm:h-[280px] md:h-[278px]  relative rounded-lg overflow-visible flex items-center justify-end z-10 shadow-[0_12px_35px_rgba(0,0,0,0.6)]"
-                                    >
+                              <div
+                                    class="w-full lg:w-[48%] h-[250px] sm:h-[280px] md:h-[278px]  relative rounded-lg overflow-visible flex items-center justify-end z-10 shadow-[0_12px_35px_rgba(0,0,0,0.6)]">
                                     <!-- Golden Outer Border Frame -->
-                             <div class="absolute inset-0 w-full h-full bg-cover bg-center pointer-events-none z-40"
-         style="background-image: url('images/Shop-by-Gender/golden-box.png');">
-    </div>
+                                    <div class="absolute inset-0 w-full h-full bg-cover bg-center pointer-events-none z-40"
+                                          style="background-image: url('images/Shop-by-Gender/golden-box.png');">
+                                    </div>
                                     <!-- Inner Red Box Background -->
-                                  
-<div class="absolute inset-0 rounded-[28px] bg-cover bg-center overflow-hidden z-20"
-         style="background-image: url('images/Shop-by-Gender/lady-red-box-bg.png');">
-    </div>
+
+                                    <div class="absolute inset-0 rounded-[28px] bg-cover bg-center overflow-hidden z-20"
+                                          style="background-image: url('images/Shop-by-Gender/lady-red-box-bg.png');">
+                                    </div>
 
 
                                     <!-- Model: Lady (Exact fit as img1) -->
@@ -585,7 +585,7 @@
                                           class="absolute bottom-[5px] left-4  flex items-end justify-start z-50 pointer-events-none">
                                           <img src="images/Shop-by-Gender/gender-lady-img.png" alt="For Her Model"
                                                 class="h-full w-auto object-contain object-bottom drop-shadow-[-6px_8px_16px_rgba(0,0,0,0.5)]">
-                                    </div> 
+                                    </div>
 
                                     <!-- Card Content Info -->
                                     <div
@@ -638,17 +638,17 @@
                               <div
                                     class="w-full lg:w-[48%] h-[250px] sm:h-[280px] md:h-[278px]  relative rounded-lg overflow-visible flex items-center justify-end z-10 shadow-[0_12px_35px_rgba(0,0,0,0.6)]">
 
-                                     <!-- Golden Outer Border Frame -->
+                                    <!-- Golden Outer Border Frame -->
                                     <div class="absolute inset-0 w-full h-full bg-cover bg-center pointer-events-none z-40"
-         style="background-image: url('images/Shop-by-Gender/golden-box.png');">
-    </div>
+                                          style="background-image: url('images/Shop-by-Gender/golden-box.png');">
+                                    </div>
 
                                     <!-- Inner Golden Box Background -->
                                     <div class="absolute inset-0 rounded-[28px] bg-cover bg-center overflow-hidden z-20"
                                           style="background-image: url('images/Shop-by-Gender/boy-golden-box-bg.png');">
                                     </div>
 
-                                  
+
 
                                     <!-- Model: Boy / Man -->
                                     <div
@@ -942,10 +942,10 @@
 
             </section>
 
-
             <!-- 5. GIFTING GUIDE SECTION -->
+
             <section
-                  class="w-full relative bg-cover bg-center select-none pt-12  sm:pt-8 lg:pt-12 pb-10 sm:pb-8 overflow-hidden">
+                  class="w-full bg-white relative bg-cover bg-center select-none pt-12  sm:pt-8 lg:pt-12 overflow-hidden">
 
                   <!-- Main Content Container -->
                   <div class="w-full mx-auto relative z-20 flex flex-col items-center">
@@ -1086,6 +1086,544 @@
 
 
                   </div>
+            </section>
+
+
+            <!-- 6. caurosel SECTION -->
+            <section class="relative w-full bg-white py-10 overflow-hidden">
+
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+                  <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+                  <style>
+                        #jewelry-showcase-section .swiper {
+                              width: 100%;
+                              padding-top: 60px;
+                              padding-bottom: 70px;
+                              overflow: visible;
+                              /* Allows the scaled center slide and shadows to pop out */
+                        }
+
+                        #jewelry-showcase-section .swiper-slide {
+                              background-position: center;
+                              background-size: cover;
+                              width: 240px;
+                              height: 350px;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+                              transform: scale(0.8) translateY(20px);
+                              opacity: 0.6;
+                              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                        }
+
+                        @media (min-width: 768px) {
+                              #jewelry-showcase-section .swiper-slide {
+                                    width: 280px;
+                                    height: 400px;
+                              }
+                        }
+
+                        /* Active Center Slide: Pop Forward Effect */
+                        #jewelry-showcase-section .swiper-slide-active {
+                              transform: scale(1.15) translateY(0px) !important;
+                              opacity: 1 !important;
+                              z-index: 20;
+                              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2), 0 0 25px rgba(130, 20, 30, 0.15);
+                        }
+
+                        #jewelry-showcase-section .swiper-slide img {
+                              display: block;
+                              width: 100%;
+                              height: 100%;
+                              object-fit: cover;
+                        }
+
+                        /* Center Play/Action Overlay Specific to Active Slide */
+                        #jewelry-showcase-section .play-overlay {
+                              position: absolute;
+                              inset: 0;
+                              background: rgba(0, 0, 0, 0.2);
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              opacity: 0;
+                              transition: opacity 0.3s ease;
+                        }
+
+                        #jewelry-showcase-section .swiper-slide-active .play-overlay {
+                              opacity: 1;
+                        }
+
+                        /* Custom Navigation Buttons Styling for Light Background */
+                        #jewelry-showcase-section .custom-swiper-prev,
+                        #jewelry-showcase-section .custom-swiper-next {
+                              background-color: #f3f4f6;
+                              color: #1f2937;
+                              border: 1px solid #e5e7eb;
+                        }
+
+                        #jewelry-showcase-section .custom-swiper-prev:hover,
+                        #jewelry-showcase-section .custom-swiper-next:hover {
+                              background-color: #82141e;
+                              color: #ffffff;
+                              border-color: #82141e;
+                        }
+
+                        /* Swiper Pagination Bullets Custom Color */
+                        #jewelry-showcase-section .swiper-pagination-bullet {
+                              background: #d1d5db;
+                              opacity: 1;
+                        }
+
+                        #jewelry-showcase-section .swiper-pagination-bullet-active {
+                              background: #82141e;
+                        }
+                  </style>
+
+                  <div id="jewelry-showcase-section" class="max-w-7xl mx-auto px-4 relative">
+
+                        <div class="flex flex-col items-center text-center mb-6 sm:mb-8
+                        ">
+                              <div
+                                    class="relative flex items-center justify-center w-[260px] sm:w-[320px] md:w-[360px] -mb-1">
+                                    <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Top"
+                                          class="w-full h-auto object-contain">
+                              </div>
+                              <h2
+                                    class="playfair-font font-bold text-[28px] sm:text-[34px] md:text-[38px] text-[#82141e] tracking-normal">
+                                    Product Showcase
+                              </h2>
+                        </div>
+
+                        <div class="relative flex items-center">
+
+                              <button
+                                    class="custom-swiper-prev absolute left-2 md:-left-6 z-30 w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all cursor-pointer">
+                                    <i class="fa-solid fa-chevron-left text-lg"></i>
+                              </button>
+
+                              <div class="swiper myJewelrySwiper w-full">
+                                    <div class="swiper-wrapper items-center">
+
+                                          <div class="swiper-slide">
+                                                <img src="/images/product-showcase/1.png" alt="Abstract 1" />
+                                          </div>
+
+                                          <div class="swiper-slide">
+                                                <img src="/images/product-showcase/2.png" alt="Abstract 2" />
+                                          </div>
+
+                                          <div class="swiper-slide relative">
+                                                <img src="/images/product-showcase/3.png" alt="Abstract 3" />
+                                                <div class="play-overlay">
+                                                      <div
+                                                            class="w-16 h-16 rounded-full bg-white/90 text-[#82141e] flex items-center justify-center shadow-2xl cursor-pointer hover:scale-110 transition-transform">
+                                                            <i class="fa-solid fa-play text-xl ml-1"></i>
+                                                      </div>
+                                                </div>
+                                          </div>
+
+                                          <div class="swiper-slide">
+                                                <img src="/images/product-showcase/4.png" alt="Abstract 4" />
+                                          </div>
+
+                                          <div class="swiper-slide">
+                                                <img src="/images/product-showcase/5.png" alt="Abstract 5" />
+                                          </div>
+
+                                    </div>
+                              </div>
+
+                              <button
+                                    class="custom-swiper-next absolute right-2 md:-right-6 z-30 w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all cursor-pointer">
+                                    <i class="fa-solid fa-chevron-right text-lg"></i>
+                              </button>
+
+                        </div>
+
+                        <div class="swiper-pagination !relative !mt-8"></div>
+
+                  </div>
+
+                  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+                  <script>
+                        const jewelrySwiper = new Swiper('#jewelry-showcase-section .myJewelrySwiper', {
+                              effect: 'coverflow',
+                              grabCursor: true,
+                              centeredSlides: true,
+                              slidesPerView: 'auto',
+                              initialSlide: 1,      // Starts the carousel properly from index 1 (so slide 1 is left, slide 2 is center)
+                              loop: false,          // Disabled loop so images don't hide or cluster unpredictably at start
+                              speed: 600,
+                              coverflowEffect: {
+                                    rotate: 0,
+                                    stretch: 20,
+                                    depth: 120,
+                                    modifier: 1,
+                                    slideShadows: false,
+                              },
+                              pagination: {
+                                    el: '#jewelry-showcase-section .swiper-pagination',
+                                    clickable: true,
+                              },
+                              navigation: {
+                                    nextEl: '#jewelry-showcase-section .custom-swiper-next',
+                                    prevEl: '#jewelry-showcase-section .custom-swiper-prev',
+                              },
+                        });
+                  </script>
+            </section>
+
+            <!-- 7. Festive Offer SECTION -->
+            <section>
+            </section>
+            <h4 class="p-10 border border-black"> Festive Offer</h4>
+
+            <!-- 8. Best Seller -->
+            <section
+                  class="w-full relative bg-[#faedd8] select-none pt-12 sm:pt-16 lg:pt-20 pb-16 sm:pb-20 overflow-hidden">
+
+                  <!-- Top-Left Corner Red Alpona / Mandala  -->
+                  <div
+                        class="absolute -top-4 sm:-top-6 md:-top-8 -left-4 sm:-left-6 md:-left-8 w-[160px] sm:w-[210px] md:w-[250px] lg:w-[290px] pointer-events-none z-10">
+                        <img src="images/New-Collection-img/red-alpona.png" alt="Mandala Top Left"
+                              class="w-full h-auto object-contain">
+                  </div>
+
+                  <!-- Bottom-Right Corner Red Alpona / Mandala -->
+                  <div
+                        class="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 -right-4 sm:-right-6 md:-right-8 w-[160px] sm:w-[210px] md:w-[250px] lg:w-[290px] pointer-events-none z-10 rotate-180">
+                        <img src="images/New-Collection-img/red-alpona.png" alt="Mandala Bottom Right"
+                              class="w-full h-auto object-contain">
+                  </div>
+
+                  <!-- Main Content Container -->
+                  <div
+                        class="max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-12 relative z-20 flex flex-col items-center">
+
+                        <!-- Section Header -->
+                        <div class="flex flex-col items-center text-center mb-10 sm:mb-12">
+                              <div
+                                    class="relative flex items-center justify-center w-[260px] sm:w-[320px] md:w-[360px] -mb-1">
+                                    <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Top"
+                                          class="w-full h-auto object-contain">
+                              </div>
+                              <h2
+                                    class="playfair-font font-bold text-[28px] sm:text-[34px] md:text-[38px] text-[#82141e] tracking-normal">
+                                    Best Seller
+                              </h2>
+                        </div>
+
+                        <!-- Product Slider Container with Left & Right Nav Arrows -->
+                        <div class="w-full relative flex items-center justify-center">
+
+                              <!-- Left Navigation Arrow Button -->
+                              <button
+                                    class="absolute -left-2 sm:left-0 lg:-left-3 z-40 w-[38px] h-[38px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#82141e] hover:bg-[#991824] text-white flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.35)] transition-transform hover:scale-105"
+                                    aria-label="Previous Products">
+                                    <i class="fa-solid fa-arrow-left text-sm sm:text-base"></i>
+                              </button>
+                              <!-- 4 Products Grid -->
+                              <div
+                                    class="w-full max-w-[1240px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 px-8 sm:px-10 lg:px-3">
+
+                                    <!-- Card 1: Floral Gold Necklace -->
+                                    <div
+                                          class="bg-white rounded-[26px] p-3.5 sm:p-4 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)] min-h-[440px]">
+                                          <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                                                class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                                          <img src="images/New-Collection-img/golden-breket.png"
+                                                alt="Bottom Golden Border"
+                                                class="absolute -bottom-3.5 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+
+                                          <div
+                                                class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
+                                                <img src="images/Best-Seller/1.png" alt="Floral Gold Necklace"
+                                                      class="w-full h-full object-cover">
+                                                <div class="absolute top-3 right-0 flex flex-col gap-1 z-20">
+                                                      <button
+                                                            class="w-[30px] h-[26px] bg-[#82141e] hover:bg-[#9e1b26] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                                                            title="View">
+                                                            <i class="fa-regular fa-eye text-xs"></i>
+                                                      </button>
+                                                      <button
+                                                            class="w-[30px] h-[26px] bg-[#82141e] hover:bg-[#9e1b26] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                                                            title="WhatsApp">
+                                                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                                                      </button>
+                                                </div>
+                                          </div>
+
+                                          <div
+                                                class="w-full flex flex-col items-center text-center pt-3 pb-2 px-1 relative z-20">
+                                                <h3
+                                                      class="playfair-font font-bold text-[18px] sm:text-[19px] text-[#7a131b] leading-tight mb-1">
+                                                      Classic Gold Chain
+                                                </h3>
+                                                <p
+                                                      class="raleway-font text-[11px] sm:text-[11.5px] text-[#333333] font-medium leading-relaxed max-w-[210px] mb-2.5">
+                                                      Elegant 22K gold chain crafted for effortless
+                                                </p>
+                                                <div class="flex items-center gap-2">
+                                                      <span
+                                                            class="raleway-font text-[12px] text-[#9b494f] line-through font-medium">₹55,999</span>
+                                                      <span
+                                                            class="raleway-font text-[15px] text-[#7a131b] font-bold">₹45,099</span>
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <!-- Card 2: Pearl Drop Earrings -->
+                                    <div
+                                          class="bg-white rounded-[26px] p-3.5 sm:p-4 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)] min-h-[440px]">
+                                          <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                                                class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                                          <img src="images/New-Collection-img/golden-breket.png"
+                                                alt="Bottom Golden Border"
+                                                class="absolute -bottom-3.5 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+
+                                          <div
+                                                class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
+                                                <img src="images/Best-Seller/2.png" alt="Pearl Drop Earrings"
+                                                      class="w-full h-full object-cover">
+                                                <div class="absolute top-3 right-0 flex flex-col gap-1 z-20">
+                                                      <button
+                                                            class="w-[30px] h-[26px] bg-[#82141e] hover:bg-[#9e1b26] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                                                            title="View">
+                                                            <i class="fa-regular fa-eye text-xs"></i>
+                                                      </button>
+                                                      <button
+                                                            class="w-[30px] h-[26px] bg-[#82141e] hover:bg-[#9e1b26] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                                                            title="WhatsApp">
+                                                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                                                      </button>
+                                                </div>
+                                          </div>
+
+                                          <div
+                                                class="w-full flex flex-col items-center text-center pt-3 pb-2 px-1 relative z-20">
+                                                <h3
+                                                      class="playfair-font font-bold text-[18px] sm:text-[19px] text-[#7a131b] leading-tight mb-1">
+                                                      Elegant Gold Bangles
+                                                </h3>
+                                                <p
+                                                      class="raleway-font text-[11px] sm:text-[11.5px] text-[#333333] font-medium leading-relaxed max-w-[210px] mb-2.5">
+                                                      Timeless gold bangles with a refined finish for every occasion.
+                                                </p>
+                                                <div class="flex items-center gap-2">
+                                                      <span
+                                                            class="raleway-font text-[12px] text-[#9b494f] line-through font-medium">₹55,999</span>
+                                                      <span
+                                                            class="raleway-font text-[15px] text-[#7a131b] font-bold">₹45,099</span>
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <!-- Card 3: Classic Gold Bracelet -->
+                                    <div
+                                          class="bg-white rounded-[26px] p-3.5 sm:p-4 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)] min-h-[440px]">
+                                          <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                                                class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                                          <img src="images/New-Collection-img/golden-breket.png"
+                                                alt="Bottom Golden Border"
+                                                class="absolute -bottom-3.5 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+
+                                          <div
+                                                class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
+                                                <img src="images/Best-Seller/3.png" alt="Classic Gold Bracelet"
+                                                      class="w-full h-full object-cover">
+                                                <div class="absolute top-3 right-0 flex flex-col gap-1 z-20">
+                                                      <button
+                                                            class="w-[30px] h-[26px] bg-[#82141e] hover:bg-[#9e1b26] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                                                            title="View">
+                                                            <i class="fa-regular fa-eye text-xs"></i>
+                                                      </button>
+                                                      <button
+                                                            class="w-[30px] h-[26px] bg-[#82141e] hover:bg-[#9e1b26] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                                                            title="WhatsApp">
+                                                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                                                      </button>
+                                                </div>
+                                          </div>
+
+                                          <div
+                                                class="w-full flex flex-col items-center text-center pt-3 pb-2 px-1 relative z-20">
+                                                <h3
+                                                      class="playfair-font font-bold text-[18px] sm:text-[19px] text-[#7a131b] leading-tight mb-1">
+                                                      Diamond Gold Ring
+                                                </h3>
+                                                <p
+                                                      class="raleway-font text-[11px] sm:text-[11.5px] text-[#333333] font-medium leading-relaxed max-w-[210px] mb-2.5">
+                                                      A delicate 22K gold ring featuring a sparkling diamond accent.
+                                                </p>
+                                                <div class="flex items-center gap-2">
+                                                      <span
+                                                            class="raleway-font text-[12px] text-[#9b494f] line-through font-medium">₹55,999</span>
+                                                      <span
+                                                            class="raleway-font text-[15px] text-[#7a131b] font-bold">₹45,099</span>
+                                                </div>
+                                          </div>
+                                    </div>
+
+                                    <!-- Card 4: Gold Bloom Ring -->
+                                    <div
+                                          class="bg-white rounded-[26px] p-3.5 sm:p-4 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)] min-h-[440px]">
+                                          <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                                                class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                                          <img src="images/New-Collection-img/golden-breket.png"
+                                                alt="Bottom Golden Border"
+                                                class="absolute -bottom-3.5 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+
+                                          <div
+                                                class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
+                                                <img src="images/Best-Seller/4.png" alt="Gold Bloom Ring"
+                                                      class="w-full h-full object-cover">
+                                                <div class="absolute top-3 right-0 flex flex-col gap-1 z-20">
+                                                      <button
+                                                            class="w-[30px] h-[26px] bg-[#82141e] hover:bg-[#9e1b26] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                                                            title="View">
+                                                            <i class="fa-regular fa-eye text-xs"></i>
+                                                      </button>
+                                                      <button
+                                                            class="w-[30px] h-[26px] bg-[#82141e] hover:bg-[#9e1b26] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                                                            title="WhatsApp">
+                                                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                                                      </button>
+                                                </div>
+                                          </div>
+
+                                          <div
+                                                class="w-full flex flex-col items-center text-center pt-3 pb-2 px-1 relative z-20">
+                                                <h3
+                                                      class="playfair-font font-bold text-[18px] sm:text-[19px] text-[#7a131b] leading-tight mb-1">
+                                                      Gold Jhumka Earrings
+                                                </h3>
+                                                <p
+                                                      class="raleway-font text-[11px] sm:text-[11.5px] text-[#333333] font-medium leading-relaxed max-w-[210px] mb-2.5">
+                                                      Traditional gold jhumkas with intricate detailing and graceful
+                                                      charm.
+                                                </p>
+                                                <div class="flex items-center gap-2">
+                                                      <span
+                                                            class="raleway-font text-[12px] text-[#9b494f] line-through font-medium">₹55,999</span>
+                                                      <span
+                                                            class="raleway-font text-[15px] text-[#7a131b] font-bold">₹45,099</span>
+                                                </div>
+                                          </div>
+                                    </div>
+
+                              </div>
+
+                              <!-- Right Navigation Arrow Button -->
+                              <button
+                                    class="absolute -right-2 sm:right-0 lg:-right-3 z-40 w-[38px] h-[38px] sm:w-[44px] sm:h-[44px] rounded-full bg-[#82141e] hover:bg-[#991824] text-white flex items-center justify-center shadow-[0_4px_12px_rgba(0,0,0,0.35)] transition-transform hover:scale-105"
+                                    aria-label="Next Products">
+                                    <i class="fa-solid fa-arrow-right text-sm sm:text-base"></i>
+                              </button>
+
+                        </div>
+
+                        <!-- Carousel Indicator Dots -->
+                        <div class="flex items-center justify-center gap-2.5 mt-8 sm:mt-10">
+                              <span class="w-3 h-3 rounded-full bg-[#7a131b]"></span>
+                              <span class="w-3 h-3 rounded-full bg-[#e3bc7c]"></span>
+                              <span class="w-3 h-3 rounded-full bg-[#e3bc7c]"></span>
+                              <span class="w-3 h-3 rounded-full bg-[#e3bc7c]"></span>
+                        </div>
+
+                  </div>
+
+            </section>
+            <!-- 9.Shop by Pricing -->
+            <section
+                  class="w-full relative bg-[#fbf5ea] bg-cover bg-center select-none pt-10  pb-16 sm:pb-20 overflow-hidden">
+
+                  <!-- Section Header -->
+                  <div class="flex flex-col items-center text-center mb-10 sm:mb-12">
+                        <div
+                              class="relative flex items-center justify-center w-[260px] sm:w-[320px] md:w-[360px] -mb-1">
+                              <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Top"
+                                    class="w-full h-auto object-contain">
+                        </div>
+                        <h2
+                              class="playfair-font font-bold text-[28px] sm:text-[34px] md:text-[38px] text-[#82141e] tracking-normal">
+                              Shop by Pricing
+                        </h2>
+                  </div>
+
+                  <!-- Left Side Peacock Background Accent -->
+                  <div
+                        class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -left-0 sm:-left-0 lg:-left-1 w-32 sm:w-[270px] md:w-[310px] lg:w-52 pointer-events-none z-10">
+                        <img src="images/Category/category-bg-img.png" alt="Peacock Accent Left"
+                              class="w-full h-auto object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
+                  </div>
+
+                  <!-- Right Side Peacock Background Accent (Flipped & Right Aligned) -->
+                  <div
+                        class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -right-0 sm:-right-0 lg:-right-1 w-32 sm:w-[270px] md:w-[310px] lg:w-52 pointer-events-none z-10 scale-x-[-1]">
+                        <img src="images/Category/category-bg-img.png" alt="Peacock Accent Right"
+                              class="w-full h-auto object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
+                  </div>
+
+                  <div class="w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4">
+
+                        <div class="relative border border-[#a33536] items-center rounded-[28px] z-10 shadow-[0_15px_35px_rgba(130,20,30,0.08)] bg-white pb-6"
+                              style="background-image: url('images/Shop-by-Pricing/cart-bg-templet.png'); background-size: cover; background-position: center;">
+                              <div
+                                    class="w-full h-72 rounded-[20px] bg-cover bg-center overflow-hidden shadow-sm flex items-center justify-center ">
+                                    <img src="images/Shop-by-Pricing/1.png" alt="Below 20K"
+                                          class="w-[85%] h-[85%] object-cover rounded-[14px]">
+                              </div>
+                              <a href="#"
+                                    class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-r from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
+                                    Below 20 K <span class="ml-1 text-lg font-normal">&gt;</span>
+                              </a>
+                        </div>
+
+                        <div class="relative border border-[#a33536] items-center rounded-[28px] z-10 shadow-[0_15px_35px_rgba(130,20,30,0.08)] bg-white pb-6"
+                              style="background-image: url('images/Shop-by-Pricing/cart-bg-templet.png'); background-size: cover; background-position: center;">
+                              <div
+                                    class="w-full h-72 rounded-[20px] bg-cover bg-center overflow-hidden shadow-sm flex items-center justify-center">
+                                    <img src="images/Shop-by-Pricing/2.png" alt="20K - 50K"
+                                          class="w-[85%] h-[85%] object-cover rounded-[14px]">
+                              </div>
+                              <a href="#"
+                                    class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-r from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
+                                    20K - 50K <span class="ml-1 text-lg font-normal">&gt;</span>
+                              </a>
+                        </div>
+
+                        <div class="relative border border-[#a33536] items-center rounded-[28px] z-10 shadow-[0_15px_35px_rgba(130,20,30,0.08)] bg-white pb-6"
+                              style="background-image: url('images/Shop-by-Pricing/cart-bg-templet.png'); background-size: cover; background-position: center;">
+                              <div
+                                    class="w-full h-72 rounded-[20px] bg-cover bg-center overflow-hidden shadow-sm flex items-center justify-center">
+                                    <img src="images/Shop-by-Pricing/3.png" alt="50K - 1L"
+                                          class="w-[85%] h-[85%] object-cover rounded-[14px]">
+                              </div>
+                              <a href="#"
+                                    class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-r from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
+                                    50K - 1L <span class="ml-1 text-lg font-normal">&gt;</span>
+                              </a>
+                        </div>
+
+                        <div class="relative border border-[#a33536] items-center rounded-[28px] z-10 shadow-[0_15px_35px_rgba(130,20,30,0.08)] bg-white pb-6"
+                              style="background-image: url('images/Shop-by-Pricing/cart-bg-templet.png'); background-size: cover; background-position: center;">
+                              <div
+                                    class="w-full h-72 rounded-[20px] bg-cover bg-center overflow-hidden shadow-sm flex items-center justify-center">
+                                    <img src="images/Shop-by-Pricing/4.png" alt="Above 1L"
+                                          class="w-[85%] h-[85%] object-core rounded-[14px]">
+                              </div>
+                              <a href="#"
+                                    class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-r from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide transition-transform hover:scale-105">
+                                    Above 1L <span class="ml-1 text-lg font-normal">&gt;</span>
+                              </a>
+                        </div>
+
+                  </div>
+
             </section>
 
 
