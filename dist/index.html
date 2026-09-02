@@ -895,7 +895,7 @@
             <img src="/assets/banner-golden-bracket-Ds1o157l.png" alt="Ornate Top"
               class="w-full h-auto object-contain">
           </div>
-          <h2 class="playfair-font font-bold text-[28px] sm:text-[34px] md:text-[38px] text-[#DA0F12] tracking-normal">
+          <h2 class="playfair-font font-bold text-[28px] sm:text-[34px] md:text-[38px] text-[#82141e] tracking-normal">
             New Collection for the Week
           </h2>
         </div>
@@ -2475,150 +2475,332 @@
       </div>
       <!-- Testimonials Carousel / Grid Container -->
 
-      <div class="relative w-full flex items-center justify-center my-10 px-6">
+      <section id="testimonials-section" class="relative w-full bg-white  overflow-hidden">
 
-        <button
-          class="absolute left-0 sm:left-2 lg:left-4 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
-          aria-label="Previous Testimonial">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 w-full max-w-[1250px]">
+        <style>
+          #testimonials-section .testimonialsSwiper {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            overflow: hidden;
+          }
 
-          <div
-            class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
+          #testimonials-section .swiper-wrapper {
+            display: flex;
+          }
 
-            <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
-              <img src="data:image/png;base64,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" alt="Half Circle"
-                class="absolute inset-0 top-3 h-24 w-full object-contain">
-              <div
-                class="absolute top-1 left-1/2 z-40 flex h-16 w-16 -translate-x-1/2 items-center justify-center text-white">
-                <i class="fa-solid fa-user text-[25px]"></i>
+          /* Prevent initial load jump: 2 cards on mobile, 3 cards on desktop */
+          #testimonials-section .testimonialsSwiper .swiper-slide {
+            width: calc(50% - 10px);
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+
+          @media (min-width: 1024px) {
+            #testimonials-section .testimonialsSwiper .swiper-slide {
+              width: calc(33.333% - 20px);
+            }
+          }
+
+          /* Custom Navigation Button Hover Effect */
+          #testimonials-section .testimonial-prev,
+          #testimonials-section .testimonial-next {
+            cursor: pointer;
+          }
+        </style>
+
+        <div
+          class="relative w-full max-w-[1340px] mx-auto flex items-center justify-center my-10 px-10 sm:px-14 lg:px-16">
+
+          <button
+            class="testimonial-prev absolute left-0 sm:left-2 lg:left-0 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
+            aria-label="Previous Testimonial">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div class="swiper testimonialsSwiper w-full">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div
+                  class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
+
+                  <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
+                    <img src="data:image/png;base64,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" alt="Half Circle"
+                      class="absolute inset-0 top-3 h-24 w-full object-contain">
+                    <div
+                      class="absolute top-1 left-1/2 z-40 flex h-16 w-16 -translate-x-1/2 items-center justify-center text-white">
+                      <i class="fa-solid fa-user text-[25px]"></i>
+                    </div>
+                    <div
+                      class="absolute -top-8 left-1/2 -z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center shadow-sm">
+                      <img src="/assets/maur-DbgOcJAI.png" alt="Maur Logo" class="h-full w-full object-contain">
+                    </div>
+                  </div>
+
+                  <div class="absolute left-12 top-6 z-30 text-[#8b1722]">
+                    <img src="data:image/png;base64,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" alt="Quote Icon" class="w-12 h-12 object-contain">
+                  </div>
+
+                  <p
+                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
+                    special and luxurious."
+                  </p>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-24 z-30 w-24 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                  <h3
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[7.5rem] z-20 text-xl leading-[1.45]">
+                    Ananya Sen
+                  </h3>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-12 z-30 h-[36px] w-56 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                </div>
               </div>
-              <div
-                class="absolute -top-8 left-1/2 -z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center shadow-sm">
-                <img src="/assets/maur-DbgOcJAI.png" alt="Maur Logo" class="h-full w-full object-contain">
+
+              <div class="swiper-slide">
+                <div
+                  class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
+
+                  <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
+                    <img src="data:image/png;base64,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" alt="Half Circle"
+                      class="absolute inset-0 top-3 h-24 w-full object-contain">
+                    <div
+                      class="absolute top-1 left-1/2 z-40 flex h-16 w-16 -translate-x-1/2 items-center justify-center text-white">
+                      <i class="fa-solid fa-user text-[25px]"></i>
+                    </div>
+                    <div
+                      class="absolute -top-8 left-1/2 -z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center shadow-sm">
+                      <img src="/assets/maur-DbgOcJAI.png" alt="Maur Logo" class="h-full w-full object-contain">
+                    </div>
+                  </div>
+
+                  <div class="absolute left-12 top-6 z-30 text-[#8b1722]">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAABFCAYAAAAcjSspAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABcRJREFUeAHtmltsFFUYx//fzF6gorTupTWEgC8m1FAfvCTGSGiqiRF50AcSH8QHS6DblohRNBjCJhAN8uCFBWI04cHLQ40BoyTgBQNIggpEbVJNBFEk0k5n24KCbXfnHL8t7aa73XZ3ZueyMfNLmpmdPTP763/OzDlzzgA+Pj4+Pj4+PrUJwSI7o9Gb6wylhVRapkgREURhRcoxAfoLMnsu3tR0Zk1f3zgcxgkP06GkIo1tComXJeh+/jhvjgOPSsJnKmHHBk37ETaT8yD2gAMeFYeSikQeJ1K38+qdMIvEAWTk5s6rg+dQJW54lA1l78KFDTIY/ohX21AlJOWWRHrwVVgg54FguEcCD6FKynmoc+2cqq9fQsHwcV69B3ZA1LZ6fl3w0L/Xj5rZbcqDA7kXdlDGY9ZQXq+vXxoIhE7y6lLYiCRa8dj8OoOFjldS3guPkpdPsrk5FNP0Xl69A84gDYjWjbp+bK5CbngQxOqErh+avlEpVTLar+9wUCQHKVAOci2on6uQGx4CyvvFHjNC2RuPt7DxC3AYrqL1YTW4ebbvJzxIPgsPPGaEIoV8BS7B13X3/llqy4QHURAuUOxREErupsbZrYJ7LLgWCK0r3ui1R0Eo4UDoEbgMEXUka8IDLyYnPQpkBKSbZ+cGUt4ei8VaCjZBPgq3kYhMeeRDeRsIEmglPIA7ZSswzYNPm/kuvI0e+VCuLYwv5sUCeIHEckz3kFgCL5j0yIcyLyga4BEkaXmRhwoPmPLIh5LNcj/GI7hbeRtqyCMfiirwNzyCJRqme9DE5e2dRz6UcSWjwyM4gTpM8+ABrDQ8YMojH8qmkZER3vgTPCbnwYvz8JDibv5JeMPY9A/cTzkLb5jwKAhFgTgML5ByGDXkURDKAlX9ihf/wHXoImrIoyCUtQMD16TAB3AbkkOoIY8ZQweKgdfcbhIF1LO15DEjlMQV7Tcp3RtTmSCbPY1SHgpegptMepQcjuTh/618jr6AS4TG8X2p7QlN2+WFR8lQctU2IDLtvPorHIY7aqfXX9cvw2sPid4pD2W2QuuHhy8a+i3LeVjwDThqI1Jzfe2ah0L541c0bbon2tQqIXJnrI13aIR9CIjs0s6hoT8rKby7If4AqUg47WF2gp12R+PbuHptgw1w0/Jel66thXkc9VDM7t+ta0leVjS7Vw6F5Duwxg0PwuewgWIPs6FMKhkbUCU8yf1xYnDwBKpgPKOsR5UQ5KFiD0uhdKbTP3Od+wNWkTJDhvo8qmTTSP/vVXtk1a7izdZqSg6qQobk9o7cP2QHDnhYDoXb9QCscYEntHfAJpzwsBRKD48a8uTRXTALV/VwVm2165mmGo9Qhtpm87CUshZrfJpvlDfBHPwoY6xpH9GsV/ci+m+Nt/GwvyWPdVfSF2YrYKWmEAm5FeYYJYknOtLp72AfpFJu7sycB/fTnirnYbqmpKLxTTDzVhE/cvPM45OJtHYQNmLdQy/rYapHuycabZVSOczXcaiyPeQlRQm0d2iXj8BG9sZiDwpBX5rx4Isi0akPfFpJ6YpDeSvatEqVxoFK3xnhA58PiuzKdUNDl2AjbnhUdE/ZE4l1qRA9FYlIaeQGqdQli5fZHUgq2thu1uOqkbnbrMecNWVfJLLIgLKfiB5GJQcjnOKhgC5u/8/ARqx4GFJ0d+v6aVigZCg9zc2hwX5tI0jZwiXKTrxzY/8DT0vs03T93WTuMdwmzHpwC9cHEm9W61EQSpIvp3ikcYsk2c0f4xXs/rUwxK6u4cHDdg4yJ817HGOPnXZ55ENJLVoUobHxo7yppcw+A/z3IUF8kijzHqwVzHgQyR7knrZt9sj3U4Kjo7EsqaVENI7uG0PiVEDBkQ5N63Vy6mHCA8qyEhe2xj/7rQE64bRHwU+notHnuINzH//SZV7+wm1T7zwhep/RdVdf05jyYLsBSOrzysPHx8fHx8fHx8fHx+f/zH98Hbb3fgDUtwAAAABJRU5ErkJggg==" alt="Quote Icon" class="w-12 h-12 object-contain">
+                  </div>
+
+                  <p
+                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
+                    special and luxurious."
+                  </p>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-24 z-30 w-24 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                  <h3
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] z-20 text-xl leading-[1.45]">
+                    Riya Mukherjee
+                  </h3>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-12 z-30 h-[36px] w-56 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                </div>
               </div>
-            </div>
+              <div class="swiper-slide">
+                <div
+                  class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
 
-            <div class="absolute left-12 top-6 z-30 text-[#8b1722]">
-              <img src="data:image/png;base64,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" alt="Quote Icon" class="w-12 h-12 object-contain">
-            </div>
+                  <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
+                    <img src="data:image/png;base64,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" alt="Half Circle"
+                      class="absolute inset-0 top-3 h-24 w-full object-contain">
+                    <div
+                      class="absolute top-1 left-1/2 z-40 flex h-16 w-16 -translate-x-1/2 items-center justify-center text-white">
+                      <i class="fa-solid fa-user text-[25px]"></i>
+                    </div>
+                    <div
+                      class="absolute -top-8 left-1/2 -z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center shadow-sm">
+                      <img src="/assets/maur-DbgOcJAI.png" alt="Maur Logo" class="h-full w-full object-contain">
+                    </div>
+                  </div>
 
-            <p class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
-              "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly special
-              and luxurious."
-            </p>
-            <div class="pointer-events-none absolute left-1/2 bottom-24 z-30 w-24 -translate-x-1/2">
-              <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
-                class="h-full w-full object-cover">
-            </div>
-            <h3 class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] z-20 text-xl leading-[1.45]">
-              Ananya Sen</h3>
+                  <div class="absolute left-12 top-6 z-30 text-[#8b1722]">
+                    <img src="data:image/png;base64,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" alt="Quote Icon" class="w-12 h-12 object-contain">
+                  </div>
 
-            <div class="pointer-events-none absolute left-1/2 bottom-12 z-30 h-[36px] w-56 -translate-x-1/2">
-              <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
-                class="h-full w-full object-cover">
-            </div>
+                  <p
+                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
+                    special and luxurious."
+                  </p>
 
+                  <div class="pointer-events-none absolute left-1/2 bottom-24 z-30 w-24 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                  <h3
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[7.5rem] z-20 text-xl leading-[1.45]">
+                    Ananya Sen
+                  </h3>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-12 z-30 h-[36px] w-56 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div
+                  class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
+
+                  <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
+                    <img src="data:image/png;base64,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" alt="Half Circle"
+                      class="absolute inset-0 top-3 h-24 w-full object-contain">
+                    <div
+                      class="absolute top-1 left-1/2 z-40 flex h-16 w-16 -translate-x-1/2 items-center justify-center text-white">
+                      <i class="fa-solid fa-user text-[25px]"></i>
+                    </div>
+                    <div
+                      class="absolute -top-8 left-1/2 -z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center shadow-sm">
+                      <img src="/assets/maur-DbgOcJAI.png" alt="Maur Logo" class="h-full w-full object-contain">
+                    </div>
+                  </div>
+
+                  <div class="absolute left-12 top-6 z-30 text-[#8b1722]">
+                    <img src="data:image/png;base64,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" alt="Quote Icon" class="w-12 h-12 object-contain">
+                  </div>
+
+                  <p
+                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
+                    special and luxurious."
+                  </p>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-24 z-30 w-24 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                  <h3
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] z-20 text-xl leading-[1.45]">
+                    Riya Mukherjee
+                  </h3>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-12 z-30 h-[36px] w-56 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div
+                  class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
+
+                  <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
+                    <img src="data:image/png;base64,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" alt="Half Circle"
+                      class="absolute inset-0 top-3 h-24 w-full object-contain">
+                    <div
+                      class="absolute top-1 left-1/2 z-40 flex h-16 w-16 -translate-x-1/2 items-center justify-center text-white">
+                      <i class="fa-solid fa-user text-[25px]"></i>
+                    </div>
+                    <div
+                      class="absolute -top-8 left-1/2 -z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center shadow-sm">
+                      <img src="/assets/maur-DbgOcJAI.png" alt="Maur Logo" class="h-full w-full object-contain">
+                    </div>
+                  </div>
+
+                  <div class="absolute left-12 top-6 z-30 text-[#8b1722]">
+                    <img src="data:image/png;base64,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" alt="Quote Icon" class="w-12 h-12 object-contain">
+                  </div>
+
+                  <p
+                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
+                    special and luxurious."
+                  </p>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-24 z-30 w-24 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                  <h3
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] z-20 text-xl leading-[1.45]">
+                    Arjun Chatterjee
+                  </h3>
+
+                  <div class="pointer-events-none absolute left-1/2 bottom-12 z-30 h-[36px] w-56 -translate-x-1/2">
+                    <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
+                      class="h-full w-full object-cover">
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div
-            class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
-
-            <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
-              <img src="data:image/png;base64,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" alt="Half Circle"
-                class="absolute inset-0 top-3 h-24 w-full object-contain">
-              <div
-                class="absolute top-1 left-1/2 z-40 flex h-16 w-16 -translate-x-1/2 items-center justify-center text-white">
-                <i class="fa-solid fa-user text-[25px]"></i>
-              </div>
-              <div
-                class="absolute -top-8 left-1/2 -z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center shadow-sm">
-                <img src="/assets/maur-DbgOcJAI.png" alt="Maur Logo" class="h-full w-full object-contain">
-              </div>
-            </div>
-
-            <div class="absolute left-12 top-6 z-30 text-[#8b1722]">
-              <img src="data:image/png;base64,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" alt="Quote Icon" class="w-12 h-12 object-contain">
-            </div>
-
-            <p class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
-              "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly special
-              and luxurious."
-            </p>
-            <div class="pointer-events-none absolute left-1/2 bottom-24 z-30 w-24 -translate-x-1/2">
-              <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
-                class="h-full w-full object-cover">
-            </div>
-            <h3 class="text-[#951416] font-semibold mt-2 absolute bottom-16 left-32 z-20 text-xl leading-[1.45]">Riya
-              Mukherjee</h3>
-
-            <div class="pointer-events-none absolute left-1/2 bottom-12 z-30 h-[36px] w-56 -translate-x-1/2">
-              <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
-                class="h-full w-full object-cover">
-            </div>
-
-          </div>
-
-          <div
-            class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
-
-            <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
-              <img src="data:image/png;base64,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" alt="Half Circle"
-                class="absolute inset-0 top-3 h-24 w-full object-contain">
-              <div
-                class="absolute top-1 left-1/2 z-40 flex h-16 w-16 -translate-x-1/2 items-center justify-center text-white">
-                <i class="fa-solid fa-user text-[25px]"></i>
-              </div>
-              <div
-                class="absolute -top-8 left-1/2 -z-10 flex h-20 w-20 -translate-x-1/2 items-center justify-center shadow-sm">
-                <img src="/assets/maur-DbgOcJAI.png" alt="Maur Logo" class="h-full w-full object-contain">
-              </div>
-            </div>
-
-            <div class="absolute left-12 top-6 z-30 text-[#8b1722]">
-              <img src="data:image/png;base64,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" alt="Quote Icon" class="w-12 h-12 object-contain">
-            </div>
-
-            <p class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
-              "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly special
-              and luxurious."
-            </p>
-            <div class="pointer-events-none absolute left-1/2 bottom-24 z-30 w-24 -translate-x-1/2">
-              <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
-                class="h-full w-full object-cover">
-            </div>
-            <h3 class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] z-20 text-xl leading-[1.45]">
-              Arjun Chatterjee</h3>
-
-            <div class="pointer-events-none absolute left-1/2 bottom-12 z-30 h-[36px] w-56 -translate-x-1/2">
-              <img src="/assets/golden-bracket-BGAiDiYw.png" alt="Golden Ornament"
-                class="h-full w-full object-cover">
-            </div>
-
-          </div>
+          <button
+            class="testimonial-next absolute right-0 sm:right-2 lg:right-0 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
+            aria-label="Next Testimonial">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
 
         </div>
 
-        <button
-          class="absolute right-0 sm:right-2 lg:right-4 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
-          aria-label="Next Testimonial">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-            stroke-width="2.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
 
-      </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            new Swiper('#testimonials-section .testimonialsSwiper', {
+              slidesPerView: 2,     /* 2 cards visible on mobile devices */
+              slidesPerGroup: 1,    /* Shifts 1 card per arrow click */
+              spaceBetween: 20,
+              loop: true,           /* Enables infinite loop */
+              speed: 600,
+              navigation: {
+                nextEl: '#testimonials-section .testimonial-next',
+                prevEl: '#testimonials-section .testimonial-prev',
+              },
+              breakpoints: {
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 24,
+                },
+                1024: {
+                  slidesPerView: 3,     /* 3 cards visible on desktop screens */
+                  spaceBetween: 30,
+                },
+              },
+            });
+          });
+        </script>
+
+      </section>
 
       </div>
 
       <!-- Slider Pagination Dots -->
-      <div class="flex items-center justify-center gap-3 mt-12">
+      <div class="flex items-center justify-center gap-3 ">
         <span class="w-3 h-3 rounded-full bg-[#f1c165] cursor-pointer"></span>
         <span class="w-3.5 h-3.5 rounded-full bg-[#82141e] cursor-pointer shadow-md"></span>
         <span class="w-3 h-3 rounded-full bg-[#f1c165] cursor-pointer"></span>
@@ -2629,27 +2811,70 @@
 
     </section>
     <!--14 Blog -->
-    <section
-      class="w-full relative select-none py-14 overflow-hidden bg-[url('/images/blgo/blog-bg.png')] bg-cover bg-center bg-no-repeat">
+   <section id="blog-carousel-section"
+      class="w-full relative select-none py-10 overflow-hidden ">
+      
+      <!-- Background Image adjusted to cover only the top 70% of the section -->
+      <div class="absolute top-0 left-0 w-full h-[70%] bg-[url('/images/blgo/blog-bg.png')] bg-cover bg-center bg-no-repeat pointer-events-none z-0"></div>
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
+      <style>
+        #blog-carousel-section .blogSwiper {
+          width: 100%;
+          padding-top: 15px;
+          padding-bottom: 25px;
+          overflow: hidden;
+        }
+
+        #blog-carousel-section .swiper-wrapper {
+          display: flex;
+        }
+
+        /* Fallback slide widths: 1 card on mobile, 2 on tablet, 3 on desktop */
+        #blog-carousel-section .blogSwiper .swiper-slide {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+          #blog-carousel-section .blogSwiper .swiper-slide {
+            width: calc(50% - 12px);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          #blog-carousel-section .blogSwiper .swiper-slide {
+            width: calc(33.333% - 20px);
+          }
+        }
+
+        /* Custom Navigation Button Hover Effect */
+        #blog-carousel-section .blog-prev,
+        #blog-carousel-section .blog-next {
+          cursor: pointer;
+        }
+      </style>
+
       <div class="max-w-[1440px] w-full mx-auto px-6 sm:px-10 lg:px-16 flex flex-col items-center relative z-20">
 
-        <!-- Top Golden Header Ornament -->
-        <div class="relative flex items-center justify-center w-[220px] sm:w-[260px] h-[45px]">
+        <div class="relative flex items-center justify-center  w-[220px] sm:w-[260px] h-[45px]">
           <img src="/assets/banner-golden-bracket-Ds1o157l.png" alt="Golden Bracket"
             class="w-full h-full object-contain pointer-events-none">
         </div>
 
-        <!-- Section Title -->
-        <h2 class="playfair-font font-bold text-[36px] sm:text-[44px] text-[#82141e] tracking-tight mb-12 text-center">
+        <h2
+          class="playfair-font font-bold text-[36px] sm:text-[44px] text-[#82141e] tracking-tight mb-8 text-center">
           Blogs
         </h2>
 
-        <!-- Blog Carousel / Grid Container with Floating Cards Layout -->
-        <div class="relative w-full flex items-center justify-center">
+        <div class="w-full max-w-[1340px]  relative flex items-center justify-center px-10 sm:px-14 lg:px-16">
 
-          <!-- Previous Blog Button -->
           <button
-            class="absolute -left-3 sm:-left-5 lg:-left-6 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
+            class="blog-prev absolute left-0 sm:left-2 lg:left-0 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
             aria-label="Previous Blog">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
               stroke="currentColor" stroke-width="2.5">
@@ -2657,115 +2882,187 @@
             </svg>
           </button>
 
-          <!-- Cards Grid Wrapper -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 w-full max-w-[1250px]">
+          <div class="swiper blogSwiper w-full">
+            <div class="swiper-wrapper">
 
-            <!-- Blog Card 1 -->
-            <div
-              class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
-              <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
-                <img src="/assets/1-iBinDX55.png" alt="Gold Jewellery Care Tips" class="w-full h-full object-cover">
-                <!-- Date Badge -->
+              <div class="swiper-slide">
                 <div
-                  class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
-                  <span class="block text-lg font-bold leading-none">12</span>
-                  <span class="text-xs uppercase tracking-wider">Aug</span>
+                  class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#cf1013]  flex flex-col">
+                  <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
+                    <img src="/assets/1-iBinDX55.png" alt="Gold Jewellery Care Tips" class="w-full h-full object-cover">
+                    <div
+                      class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                      <span class="block text-lg font-bold leading-none">12</span>
+                      <span class="text-xs uppercase tracking-wider">Aug</span>
+                    </div>
+                  </div>
+                  <div class="p-4 flex flex-col flex-grow">
+                    <span
+                      class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">CARE
+                      TIPS</span>
+                    <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Gold Jewellery Care Tips to
+                      Keep Them Shining</h3>
+                    <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
+                    <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Simple yet effective tips to
+                      keep your gold jewellery as radiant as new.</p>
+                    <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
+                      <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
+                      <span
+                        class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="pt-4 pb-2 flex flex-col flex-grow">
-                <span
-                  class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">CARE
-                  TIPS</span>
-                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Gold Jewellery Care Tips to
-                  Keep Them Shining</h3>
-                <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
-                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Simple yet effective tips to keep
-                  your gold jewellery as radiant as new.</p>
-                <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
-                  <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
-                  <span class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </div>
 
-            <!-- Blog Card 2 -->
-            <div
-              class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
-              <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
-                <img src="/assets/2-nh30ScO2.png" alt="The Art Behind Every Exquisite Piece"
-                  class="w-full h-full object-cover">
-                <!-- Date Badge -->
+              <div class="swiper-slide">
                 <div
-                  class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
-                  <span class="block text-lg font-bold leading-none">14</span>
-                  <span class="text-xs uppercase tracking-wider">Aug</span>
+                  class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#cf1013] flex flex-col">
+                  <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
+                    <img src="/assets/2-nh30ScO2.png" alt="The Art Behind Every Exquisite Piece"
+                      class="w-full h-full object-cover">
+                    <div
+                      class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                      <span class="block text-lg font-bold leading-none">14</span>
+                      <span class="text-xs uppercase tracking-wider">Aug</span>
+                    </div>
+                  </div>
+                  <div class="p-4 flex flex-col flex-grow">
+                    <span
+                      class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">BEHIND
+                      THE SCENES</span>
+                    <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">The Art Behind Every
+                      Exquisite Piece</h3>
+                    <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
+                    <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Go behind the scenes and
+                      discover the craftsmanship that makes each piece truly...</p>
+                    <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
+                      <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
+                      <span
+                        class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="pt-4 pb-2 flex flex-col flex-grow">
-                <span
-                  class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">BEHIND
-                  THE SCENES</span>
-                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">The Art Behind Every Exquisite
-                  Piece</h3>
-                <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
-                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Go behind the scenes and discover
-                  the craftsmanship that makes each piece truly...</p>
-                <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
-                  <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
-                  <span class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
-                    </svg>
-                  </span>
-                </div>
-              </div>
-            </div>
 
-            <!-- Blog Card 3 -->
-            <div
-              class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
-              <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
-                <img src="/assets/3-qSXaab13.png" alt="Bridal Jewellery Ideas for a Regal Look"
-                  class="w-full h-full object-cover">
-                <!-- Date Badge -->
+              <div class="swiper-slide">
                 <div
-                  class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
-                  <span class="block text-lg font-bold leading-none">15</span>
-                  <span class="text-xs uppercase tracking-wider">Aug</span>
+                  class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#cf1013] flex flex-col">
+                  <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
+                    <img src="/assets/3-qSXaab13.png" alt="Bridal Jewellery Ideas for a Regal Look"
+                      class="w-full h-full object-cover">
+                    <div
+                      class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                      <span class="block text-lg font-bold leading-none">15</span>
+                      <span class="text-xs uppercase tracking-wider">Aug</span>
+                    </div>
+                  </div>
+                  <div class="p-4 flex flex-col flex-grow">
+                    <span
+                      class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">STYLE
+                      & TRENDS</span>
+                    <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Bridal Jewellery Ideas for
+                      a Regal Look</h3>
+                    <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
+                    <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Handpicked bridal jewellery
+                      inspiration to make your big day unforgettable.</p>
+                    <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
+                      <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
+                      <span
+                        class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="pt-4 pb-2 flex flex-col flex-grow">
-                <span
-                  class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">STYLE
-                  & TRENDS</span>
-                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Bridal Jewellery Ideas for a
-                  Regal Look</h3>
-                <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
-                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Handpicked bridal jewellery
-                  inspiration to make your big day unforgettable.</p>
-                <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
-                  <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
-                  <span class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor" stroke-width="2.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
-                    </svg>
-                  </span>
+              <div class="swiper-slide">
+                <div
+                  class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#cf1013] flex flex-col">
+                  <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
+                    <img src="/assets/2-nh30ScO2.png" alt="The Art Behind Every Exquisite Piece"
+                      class="w-full h-full object-cover">
+                    <div
+                      class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                      <span class="block text-lg font-bold leading-none">14</span>
+                      <span class="text-xs uppercase tracking-wider">Aug</span>
+                    </div>
+                  </div>
+                  <div class="p-4 flex flex-col flex-grow">
+                    <span
+                      class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">BEHIND
+                      THE SCENES</span>
+                    <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">The Art Behind Every
+                      Exquisite Piece</h3>
+                    <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
+                    <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Go behind the scenes and
+                      discover the craftsmanship that makes each piece truly...</p>
+                    <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
+                      <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
+                      <span
+                        class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
+              <div class="swiper-slide">
+                <div
+                  class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#cf1013] flex flex-col">
+                  <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
+                    <img src="/assets/3-qSXaab13.png" alt="Bridal Jewellery Ideas for a Regal Look"
+                      class="w-full h-full object-cover">
+                    <div
+                      class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                      <span class="block text-lg font-bold leading-none">15</span>
+                      <span class="text-xs uppercase tracking-wider">Aug</span>
+                    </div>
+                  </div>
+                  <div class="p-4 flex flex-col flex-grow">
+                    <span
+                      class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">STYLE
+                      & TRENDS</span>
+                    <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Bridal Jewellery Ideas for
+                      a Regal Look</h3>
+                    <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
+                    <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Handpicked bridal jewellery
+                      inspiration to make your big day unforgettable.</p>
+                    <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
+                      <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
+                      <span
+                        class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
+                          stroke="currentColor" stroke-width="2.5">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <!-- Next Blog Button -->
           <button
-            class="absolute -right-3 sm:-right-5 lg:-right-6 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
+            class="blog-next absolute right-0 sm:right-2 lg:right-0 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
             aria-label="Next Blog">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
               stroke="currentColor" stroke-width="2.5">
@@ -2776,12 +3073,211 @@
         </div>
 
       </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          new Swiper('#blog-carousel-section .blogSwiper', {
+            slidesPerView: 1,    /* 1 card on mobile */
+            slidesPerGroup: 1,    /* Shifts 1 card per click */
+            spaceBetween: 20,
+            loop: true,          /* Infinite loop enabled */
+            speed: 600,
+            navigation: {
+              nextEl: '#blog-carousel-section .blog-next',
+              prevEl: '#blog-carousel-section .blog-prev',
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2, /* 2 cards on tablets */
+                spaceBetween: 24,
+              },
+              1024: {
+                slidesPerView: 3, /* 3 cards on laptop/desktop */
+                spaceBetween: 30,
+              },
+            },
+          });
+        });
+      </script>
     </section>
+
+
 
 
   </main>
   <!-- MAIN BANNER & TRUST SECTION END -->
-  <h4 class="p-10 border border-black"> sucharita sardar</h4>
+ <footer class="">
+    <section class="w-full h-[31rem] relative select-none overflow-visible pt-16" style="background-image: url('/assets/footer-bg-Aip11FUS.png'); background-size: cover; background-position: center;">
+
+      <div class="absolute -top-[5.38rem] left-0 w-full pointer-events-none z-20">
+        <img src="/assets/footer-top-img-C2N754yk.png" alt="Footer Top Border" class="w-full h-auto object-contain">
+      </div>
+
+      <div class="absolute top-4 sm:top-0 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center pointer-events-auto">
+        <a href="#" class="w-[82px] h-[82px] sm:w-[96px] sm:h-[96px] md:w-[110px] md:h-[110px] rounded-full bg-white shadow-[0_8px_20px_rgba(0,0,0,0.3)] border-[2.5px] border-[#ecd29f] p-2 flex items-center justify-center transition-transform hover:scale-105" aria-label="Puspam Jewellers Home">
+          <img src="/assets/footer-logo-ii5YvbNy.png" alt="PUSHPAM JEWELLERS LOGO" class="w-full h-full object-contain">
+        </a>
+      </div>
+
+      <div class="max-w-[1440px] w-full mx-auto relative z-20 pt-8 sm:pt-12">
+
+        <div class="grid grid-cols-1 px-6 sm:px-10 lg:px-16 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
+
+          <div class="lg:col-span-1 flex flex-col items-start text-left">
+            <p class="raleway-font text-[#f3e3d3] text-[13.5px] sm:text-[14.5px] leading-relaxed mb-6 font-normal">
+              Timeless gold jewellery crafted with purity, passion &amp; perfection for every precious moment.
+            </p>
+            <div class="flex items-center gap-3">
+              <a href="#" class=" rounded-full  flex items-center justify-center transition-all" aria-label="Facebook">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABDhJREFUeAGdVk1sVFUUPue+N6VtgrYLiVFMBzSaGCSQuDAhoR0TqSSNUbAVo4ZpQlxJYmKMS8uOpRjjxki6cIFWBUEk1MSp7owbC0ugTEP4afkb/qZD6TuHc+899703bQcIdzHvnXPP/3fOeYPwgHO9Uu6K47Y3iPh1ITcjwPPEvEKeCSCcQMRJZvrziZmbP+PQ2HwrO7gckyvl9ptgviDAT4XscoKIwMxgH6mcI92pojFfPdn73b5HciLRF5mjI2JrnUqoUeclC6RZmS0hQUzjXS51bx2ttnQyO17eEEf4l7x2w2Me8TZjEnqze8vo/0ucXDxWLhYK8K8wVj3MUFq4xXx3YW+w1tEebezY9P205Zsg0FbgioisEiDZxmOFfXnIKbpisOcr5X6BKeMzOZykUbrn6vd+P3/4487UyZXjH+xmoh6nI0LyzqCKRC5wsUXOpgHeSwbeFrGS2P+arHyQTVhxY04Y1rV3ND53GXJlJL48f+aU3Pawy9gi7WH1Gvmy8J6n+n8YCdTssY/KaHi/K5C4Ug3XiOTreT2uR2vjK43Tg4xcDPCwlspKyBtm9Wa+AfVvHX5/vN8boSkz0gYRwVBeUoJZA0PuutdJ/TEBbfG2yIWdxswhC1Ia4IWtB2ftexxFu6SiH3qc2WmHbLyDoIOSKPTFwlkvMTi4NRWdCB+hN8B35HEnBLCQLNwyjBfkdqXcrWQftTMqhQI0qMUgTgB68dLRHQu2AVjHLkw054YvIRhe/daBUVh0Lh7dURap/cxprdMAMavIfCxpRxquK5YNxJHoHXhhguWOAP20lADz68Z2I9qsdJrktOGFI0MN4axI1wQ2jRrr7z9s8OyzAz8OW/L84fd2gaFNSNgnAkVVC70YTOlcwoIRuM9yftCIIDd8qJH2Sog7sxS4T5LbKdJFb9rOE3v0RN6NGfmZEd2TsVAVuX7JdhjnSkHJkuWZ0eQnW+cJtbfswGOQzO3SE7LLYCLUNawQDk/Xc/pOmZZbPJy1ow2ZiNJ5YQorxmV43BAk4yJeU4YLB3RVqMF0beTyDLvNxeFXD0Amx9qhXD0zeXXMpTf9y7YRyfZLjSyd2KYe8GujBLKfpAn2iJXN0PJ47EV5d/HdQ984/XM/DXaQmf9P+C9bB35y/Q6CMANNEHFu32OOq23v4a32bP9traXdFn5uaGyOIhyQStVCLdPy6eoIOMlucAso4Ghpj2JaQruNZwsQlYLz9Huy5p1D1TgyJRGa4bDeVUm/EUgeL8/TC48LAWR4XCvEUf8z23+dXuLEntXbDk5CEr0m0lXWXWFB9c7UuG+dvI+0MSSyk405eNXZyZ1l/63YM3Vg4BNR/Uzq2+P9IQSsmtUtA2vykdoXN27vXTM80Vhsq6UTB+RIXzz1YuegOOsHY14RznpkjCW3u5LAlNB/s4HK7Xp9fOPwRK2VnfskuzMtFC49/AAAAABJRU5ErkJggg==" alt="Facebook" class="w-6 h-6 object-cover">
+              </a>
+              <a href="#" class=" rounded-full  flex items-center justify-center transition-all" aria-label="Instagram">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABTNJREFUeAGNVl1sFFUUPufcmWWNQdsYW1Jbu7Saau1vQNPy0B8DVGNEEcE+oDRBFH9ICw9qYpRi+sCLKTWRiJhUI0ZMC2JUBA1dywNFRaBQG5tgf4TELiG0RvtDd2eu59yZabfSKnd3Z+7c83fPd745dxH+Y5xpLkmJu3YNEla74FaAhlxEDLHIAYRzfO8m1/0unDnRXrCud2o+PzjXYrQxEr7ltrRXXRcaQGOKaImiNgZaB6Y8QxHwfZAU7Fq65YeWGwpyprks4ij8kgUFnnTa6awnCYmBOXqrfB2KO1BdvvXk4LxBfmxeVmLZ0MHT1BmxnmNf2s/q+sGSYUJ8uPSlE2evCyIZYNju0lovgv8ZHkKzY6B3MdH5O7og5JbmP3tiaFaQ7vcqBvgW8e09Gw0n+eGY6+oLvDvtovb0Xd+I5IsRXn2aBTlSJe3b8ugZG48/sGxb1wSZAO9X1RNhNhKbMJX4y3bUVPTC8XKy4BPLxnGlAJT/sS2llc0zRTHbpvaSzcdz2XMTsCGxDxJ7xIKFN9uvmM32NOaHIDO9jzPI1iIyuEJ/4aZo7i97q7a7gI3T6Rqpq40e+sXSMKwJ9xRu7Nhx/oPqLn4uw5mURuKWziHMSlvLFhFEZXaB3k4+PtdaUciTxuk1RewaRpGsPpaPmHQB3y7YFM1gjbrzeyvuZbYd87LwM1KUskBDjUWklmtB1gSHoBYD4IYzkdyZsjqwNT83/i5WdyRkpbd1RT0j2NDbutxiaTaoUKF28AKS4UVS6lRlccxiDq095x4GRAaVdDQTE7chAdc+6xsK7f/1o5olrNUZd63XiOJsQ7sMBxBuAvI4g56/gP+VkleRgYThEqdKsYKSuxISiM3oPRuOtoSs8E6WrxFoGb8NNrm7xyev7mbbER8aZoYhg/bII7CTFC9Xgog3WRdygFzQ5YkySlKPmEdXrBS5YG5wV1i69Pmf47x2WdYZOgkAni+2RfKyIgrxXE15tAt+hqseokocUpqOMqyEpwMS8E8K2+nFpnTJGMgz4nXt6XHX8zJMiHE/u8sTXpo6JfULkx63mP7YwpfVpNqow4m/GItKfq3Pqom/G37b/2gD1+dW6WIOV91rpORbq6DZ9Vic3PcsyeM9m55g4iDvyqEJIan/jjdzWSGn9qs6eTi1Z4l9e2rWi1q7zeC3yZBSsUQC0snECNq2eFTdFrO3k6NvNuvCCo4TAsq9ppxP5Rm97MSkebDt8Tf5OSb9jRNOMbj7PYsS8Ytk2eXBi2sAkZpo/S2BRUcYu1GDtamaUBtX3L3ui15Ga0fAFP+Xyo95jHmKzx6Du9b01p21X/dYpNYHL64y+jh4JedSmwl88cCTjZzRdn8PgpHEaspc3f7G7wefKkDHyUpQIl2xkgMzg6EZn4onemRDlw6tadIuvA7TPQWlAdVnP3HgHRNkIFoXtv8c+4nX7/PlRo9z7uc09jH2A6aUXCTHld6JWrgkcybVXa6Glax7f1KLE7QG73isLQcgqdUPfF4bCVn6NItTp4MEBkHDCVoDzD7OEJNPTDOGUcXLMh45ODQriIzYkfXFOuEcZv2MADnhu3Rd8E+j4LjgcMFGzOrMBa6SZT2Y/tC+bkja0Kzxxze1EaZzlKcR9I+64O4bzEyC4MHgdwKcxKpFq9oGkn3O+W9FxuXDz2zR6GzjAmUn/WfQPp2nk/LP0VFHQ8tk2Nq5uPrDyX/7mjeIcXTqOTt2ZWItk3glQ1HES8UgbUnrKT7M+pk/nRw1OjY+dnTx6kOj8/n5B8ou92MKPu6aAAAAAElFTkSuQmCC" alt="Instagram" class="w-6 h-6 object-cover">
+              </a>
+              <a href="#" class=" rounded-full  flex items-center justify-center transition-all" aria-label="YouTube">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAABCFJREFUeAGNVV1oHFUUPufe2dlpUNkgRgQl05RSqbVN2peioJuCrQ8FfxsE+5I3HxpRxIoPksUXxQc1VCyiUIr4omLE5qUKbnzwp1RI2/iHLd0tKf2jtEsfmmQzM6fn3Dtzd7bZTXPIZO6ee36/8zMIK1C1EpaKxbufSgB3ENETALQOAIt8FSPAKUQ4mSTxTxeX4NuRyj/NbnawE7NWCYNLa+55KwJ8DQlKmSCZN1EmxycE9sSHutLw8WP7T02sykn1vcHQ13CELzalplOjxlrORYub+pe7c80EhoffPlHv6uTXDwYHEdTPrNgLdyCCzjAQ0mVKvKcf33/8xDInv3MG4OtjnH9fZgYB2wyS45EghXi7Q7Sp8u+GXywObd332zlhq8yJCgpVrVSfUkCK/8mD5kH+zflppBZP7tHcZfcoD8pb8Z/qjZaWpn6obOtxTo5NbB9jB/3GAGq0jrR1hKKkMwPGWM4ZmgeNnJFF0dOK+LDpgV79pknwz8+2FXDR/x+Q+i0GaMAAAwxdZ+m/GJDY9VcLu1ZhETcy4z4DnZhnxcTieV1FxQGPIv9FDiY0RhXavjRo05e4FLw69Pp0A+5AMx+VS4nXPMBqeyVG8Sum+Mz8hV2qAGqnxVhSRIc5i7yzGgdCIqcif8zAZCG0NtiV1oWyQk9vVraAaQ0QtNaXs85w0R4shzMHt4crOWKjV0RfArbNgxL4k1K1LbaQGq0DjqYNcUehVkFt9vPyuJn0DuT0TTLiREsfrbPtINwUKnPWapmBQNts2fr4318M/9HJibS5taVcUfjse9y6ixx2sT2k5QYiDklrukEUf9hU1HlHmfbn3iS70NB2UORxeDWGbkO27MzQdjAQeVE9KMAj6/dOn4cupKUIQHYTYNpnALP43+Gdn/LhFdkY+RFYoGbv0Ojqukvo30PlENCvpevFEpmJOMzVwWk7qcpgKm/N7x4vODBzqFxajQORQxW8y0W3I5BtALGF6iiKwF1eT423pzOIdqvzmyce4EIaVO6b0mo/BrjAP/oYppLdFtwAaOuSANUvnJlfbxI7/dXuCt+PW7WE3FcC08Xrkk+5+U2fW8GZCKUWYsKxDS9PfWKu577es2Yxnj/OoG20W8VGkq4xdKZzZK4IsY1vP12Qlrw+8NLUgHDMQDw08s28Bm8349gws6Bcn6NZ8WbNp6teJtrMlDabUNkJ57fVsStJXQkK/jDkUnd0/rvntkRxcpQl78++s23Z5DNxfHLwpshd8zTuePD5yZMdnQjVJp8NVaKqfAw7FzrvvV2fUZ69mUTPPDxypNbGhy40N/nCPjbyBqPQ35ovF71TtZ8ealCCE8mNq++vHZ1eWJY1rEBUKXtzW+/do2LcxXg/yqzNrOKxp0U+n2WJX2KiatKIf1w7+n3Xwb0FkkeL5Z2ISRkAAAAASUVORK5CYII=" alt="YouTube" class="w-6 h-6 object-cover">
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-start text-left">
+            <h3 class="playfair-font font-bold text-[17px] sm:text-[18px] text-[#f3d99e] tracking-wider mb-2">
+              QUICK LINKS
+            </h3>
+            <div class="w-[120px] h-[15px] mb-4">
+              <img src="data:image/png;base64,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" alt="Divider Ornament" class="w-full h-full object-contain object-left">
+            </div>
+            <ul class="flex flex-col gap-2.5 raleway-font text-[13.5px] text-[#e0cfc8]">
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Home</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  About Us</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Collections</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Gold Rate</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Customer Jewellery</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Gallery</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col items-start text-left">
+            <h3 class="playfair-font font-bold text-[17px] sm:text-[18px] text-[#f3d99e] tracking-wider mb-2">
+              COLLECTIONS
+            </h3>
+            <div class="w-[120px] h-[15px] mb-4">
+              <img src="data:image/png;base64,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" alt="Divider Ornament" class="w-full h-full object-contain object-left">
+            </div>
+            <ul class="flex flex-col gap-2.5 raleway-font text-[13.5px] text-[#e0cfc8]">
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Bangles</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Necklaces</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Rings</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Earrings</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Bracelets</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Pendants</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Mangalsutra</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col items-start text-left">
+            <h3 class="playfair-font font-bold text-[17px] sm:text-[18px] text-[#f3d99e] tracking-wider mb-2">
+              CUSTOMER CARE
+            </h3>
+            <div class="w-[120px] h-[15px] mb-4">
+              <img src="data:image/png;base64,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" alt="Divider Ornament" class="w-full h-full object-contain object-left">
+            </div>
+            <ul class="flex flex-col gap-2.5 raleway-font text-[13.5px] text-[#e0cfc8]">
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Jewellery Care</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  FAQ's</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Shipping Policy</a></li>
+              <li><a href="#" class="hover:text-[#f3d99e] transition-colors flex items-center gap-1.5"><span>›</span>
+                  Return Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col items-start text-left">
+            <h3 class="playfair-font font-bold text-[17px] sm:text-[18px] text-[#f3d99e] tracking-wider mb-2">
+              CONTACT US
+            </h3>
+            <div class="w-[120px] h-[15px] mb-4">
+              <img src="data:image/png;base64,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" alt="Divider Ornament" class="w-full h-full object-contain object-left">
+            </div>
+            <ul class="flex flex-col gap-3.5 raleway-font text-[13.5px] text-[#e0cfc8]">
+              <li class="flex items-start gap-3">
+    <div class="brder-2 border-white w-6 h-6 rounded-full bg-[#F1C165] flex justify-center items-center">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAOBJREFUeAF9jj1qQkEUhc95SWGqRJiIEAivSJGsIFsIBLKGpAsJggsQfFsQEbWy1A2IrYWlYGFhYWFh6Q+DoGAz16vynlqMp5n5uB/nXlbM4wjgK/YRKf0vZnl4Eqj4lBDxgSsJVFickC+NMEz5ZYdeQiIrWOuXSddKQPD7Y631yn/zeVsrx4dicomrN2ucY+4oo1nNZsN4WE+n7yPgNmbGn4rJFPWJBJxSpOBEtiRrJB60pq/qgOdryiYT6aqi74ybc+hs1t3Pu9RQr3vHofEy9LWUjfmiBN+gvBF8hmCyA9XDPNnFuODXAAAAAElFTkSuQmCC" alt="Phone" class="w-3 h-3">
+
+    </div>
+                <a href="tel:7047159767" class="hover:text-[#f3d99e] transition-colors">7047159767</a>
+              </li>
+              <li class="flex items-start gap-3">
+                      <div class="brder-2 border-white w-6 h-6 rounded-full bg-[#F1C165] flex justify-center items-center">
+
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAOVJREFUeAGVj71KQ0EUhGfO7rXQQgI2aXwBbfQRUllYaqOiWNuLlY2NIEIKRWxUAvZ5gbxDqkCeIYE0aUJyd3LycyGEhJBpzu7yzcweYAuxWiodWoyVTWA+HNbjTsguknBK4Hp9JGrBsn0T8B6BJoWv1SA/lNSCsWrTCuDN3R1Jv0uJf5C6JF8n11i8e8MzGSpu8DDdO/Rjsv9ENQrGFuBHKL8xpDaoS3f0xHSVgJeCmSZ72hMNx957q7lzNojgX/P54MfPcLa71w/gkYN3axY8cbAHpBq/y+WDwWh0jg0KedbANhoDfcxKoj+ujFwAAAAASUVORK5CYII=" alt="Email" class="w-3 h-3 ">
+                          </div>
+                <a href="mailto:info@puspamjeweller.com" class="hover:text-[#f3d99e] transition-colors break-all">info@puspamjeweller.com</a>
+              </li>
+              <li class="flex items-start gap-3">
+                      <div class="brder-2 border-white w-6 h-6 rounded-full bg-[#F1C165] flex justify-center items-center">
+
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAATFJREFUeAF9kL9Lw1AQx+9e41IVGhMbFwd/TGomFyf/AgcHd0etVqF/gOjqZIRWFBGkqzg6+Q9U3MXBQhWhJTXyBC0Y25yXNikvUHrweN+7+3C/EBQrGpP7iLCDgNME8CKITnJe8zrOp2JRMq0Cgw4QZAixigBL/K+vpce+7lo/lZAREYtEdMDVvgPQ7PyHu6gJmOd4KwA6vIDlkT58pus2V9VZPux59ecwtuW6YfUKv4xv1Ob68C/RW7c8gH1smuOhLlvWKBHMsiT0/WaUj2Y2sjfsbXCgyuPccmiF3yrvUN713M0EfD4xtdARwSPLtHoh0RYzOdmoqQvC9mfjCYguVRCBnBhMwKH5nb8jbit7Hr0Hbc1JdFGdgpQyQDjtopgq5mX9FYbZFV+jZGbvB+X+AVp5aPZWgsYfAAAAAElFTkSuQmCC" alt="Location" class="w-3 h-3 ">
+                      </div>
+                <div class="flex flex-col">
+        
+                <span>Jadupur, Purba Medinipur,</span>
+<span>West Bengal - 721641</span>
+            </div>
+              </li>
+              <li class="flex items-start gap-3">
+                      <div class="brder-2 border-white w-6 h-6 rounded-full bg-[#F1C165] flex justify-center items-center">
+
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAAWxJREFUeAFdkb9LQnEUxc/9vqeLi5SmQ4MQLVHR0JBbpZNT0Y+pKcQlGpoiKCP6A4KCilqiZqM5hISGKATxH5DAIZEQx0rf93aeKEEXvo937z3vnA/fJ+jXSTicCASCh1CkoRoX4ENESt/dn/xOu/3ua4z/OBsaWQm6waooPhV214jOQXTPsuH8zd/7Ouk5OsEKoPtsUyJYFmhJIfN0v1OgSl3+y3Yn5Xw4cqswHgQuF00u1ikaHeAR654JNaZFjIpZhNgixxsCWVODrNKZGNmeWLBkoGWIpOmmMYKXVfFCQZIZl6qSo+iKx68niFMDbMzlpw3PYsYYJPtOCXI/4q9SVrrjRGg4mVBo2hEJq/CqgAn8L8UN52N0qRunY46IkOPw1V/0Jc+qao2gwFMjb8Z45qBHdRqNrhqLazYPsFp0xK10HG+K0bM0yPE2NrdbzYIM0i7C8YR17TFfF+gao1uDP6kI7ea3Wq26r/kFFIaKLhcAtqYAAAAASUVORK5CYII=" alt="Timing" class="w-3 h-3">
+                      </div>
+                <div class="flex flex-col">
+                  <span>Mon-Sat: 10:30 AM-8:30 PM</span>
+                  <span>Sunday: Closed</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="relative w-full">
+          <div class=" h-auto pointer-events-none">
+            <img src="/assets/footer-bottom-img-C6OQIv8o.png" alt="Footer Bottom Flavour">
+
+          </div>
+          <div class="w-full absolute left-40 bottom-4 max-w-[900px] bg-gradient-to-r from-[#e7be68] via-[#f7dab3] to-[#e7be68] text-[#1c0003] px-6 py-3 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.3)] text-center raleway-font text-[12px] sm:text-[13.5px] font-medium tracking-wide">
+            © 2026 <span class="text-[#82141e] font-bold">Puspam Jewellery</span>. All Rights Reserved. Design &amp;
+            Developed by <span class="text-[#82141e] font-bold">Insu Creation Pvt. Ltd.</span>
+          </div>
+
+        </div>
+     <div class="absolute -top-10 -right-20 sm:-top-8 w-[150px] sm:w-56 pointer-events-none z-50 rotate-[-65deg]">
+            <img src="/assets/palak-DvEcoTbx.png" alt="Peacock Feather" class="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.3)]">
+          </div>
+
+      </div>
+
+    </section>
+  </footer>
 </body>
 
 </html>
