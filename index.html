@@ -2759,154 +2759,242 @@
 
     </section>
     <!--14 Blog -->
-    <section
-      class="w-full relative select-none overflow-hidden bg-[url('/images/blgo/blog-bg.png')] bg-cover bg-center bg-no-repeat">
-      <div class="max-w-[1440px] w-full mx-auto px-6 sm:px-10 lg:px-16 flex flex-col items-center relative z-20">
+   <section id="blog-carousel-section" class="w-full relative select-none py-10 overflow-hidden bg-[url('/images/blgo/blog-bg.png')] bg-cover bg-center bg-no-repeat">
 
-        <!-- Top Golden Header Ornament -->
-        <div class="relative flex items-center justify-center w-[220px] sm:w-[260px] h-[45px]">
-          <img src="images/banner-img/banner-golden-bracket.png" alt="Golden Bracket"
-            class="w-full h-full object-contain pointer-events-none">
-        </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
 
-        <!-- Section Title -->
-        <h2 class="playfair-font font-bold text-[36px] sm:text-[44px] text-[#82141e] tracking-tight mb-12 text-center">
-          Blogs
-        </h2>
+  <style>
+    #blog-carousel-section .blogSwiper {
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 25px;
+      overflow: hidden;
+    }
 
-        <!-- Blog Carousel / Grid Container with Floating Cards Layout -->
-        <div class="relative w-full flex items-center justify-center">
+    #blog-carousel-section .swiper-wrapper {
+      display: flex;
+    }
 
-          <!-- Previous Blog Button -->
-          <button
-            class="absolute -left-3 sm:-left-5 lg:-left-6 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
-            aria-label="Previous Blog">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
+    /* Fallback slide widths: 1 card on mobile, 2 on tablet, 3 on desktop */
+    #blog-carousel-section .blogSwiper .swiper-slide {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-          <!-- Cards Grid Wrapper -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 w-full max-w-[1250px]">
+    @media (min-width: 768px) {
+      #blog-carousel-section .blogSwiper .swiper-slide {
+        width: calc(50% - 12px);
+      }
+    }
 
-            <!-- Blog Card 1 -->
-            <div
-              class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
+    @media (min-width: 1024px) {
+      #blog-carousel-section .blogSwiper .swiper-slide {
+        width: calc(33.333% - 20px);
+      }
+    }
+
+    /* Custom Navigation Button Hover Effect */
+    #blog-carousel-section .blog-prev,
+    #blog-carousel-section .blog-next {
+      cursor: pointer;
+    }
+  </style>
+
+  <div class="max-w-[1440px] w-full mx-auto px-6 sm:px-10 lg:px-16 flex flex-col items-center relative z-20">
+
+    <div class="relative flex items-center justify-center w-[220px] sm:w-[260px] h-[45px]">
+      <img src="images/banner-img/banner-golden-bracket.png" alt="Golden Bracket" class="w-full h-full object-contain pointer-events-none">
+    </div>
+
+    <h2 class="playfair-font font-bold text-[36px] sm:text-[44px] text-[#82141e] tracking-tight mb-8 sm:mb-12 text-center">
+      Blogs
+    </h2>
+
+    <div class="w-full max-w-[1340px] relative flex items-center justify-center px-10 sm:px-14 lg:px-16">
+
+      <button class="blog-prev absolute left-0 sm:left-2 lg:left-0 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2" aria-label="Previous Blog">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <div class="swiper blogSwiper w-full">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
               <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
                 <img src="/images/blgo/1.png" alt="Gold Jewellery Care Tips" class="w-full h-full object-cover">
-                <!-- Date Badge -->
-                <div
-                  class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                <div class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
                   <span class="block text-lg font-bold leading-none">12</span>
                   <span class="text-xs uppercase tracking-wider">Aug</span>
                 </div>
               </div>
               <div class="pt-4 pb-2 flex flex-col flex-grow">
-                <span
-                  class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">CARE
-                  TIPS</span>
-                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Gold Jewellery Care Tips to
-                  Keep Them Shining</h3>
+                <span class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">CARE TIPS</span>
+                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Gold Jewellery Care Tips to Keep Them Shining</h3>
                 <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
-                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Simple yet effective tips to keep
-                  your gold jewellery as radiant as new.</p>
+                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Simple yet effective tips to keep your gold jewellery as radiant as new.</p>
                 <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
                   <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
                   <span class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor" stroke-width="2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
                     </svg>
                   </span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Blog Card 2 -->
-            <div
-              class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
+          <div class="swiper-slide">
+            <div class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
               <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
-                <img src="/images/blgo/2.png" alt="The Art Behind Every Exquisite Piece"
-                  class="w-full h-full object-cover">
-                <!-- Date Badge -->
-                <div
-                  class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                <img src="/images/blgo/2.png" alt="The Art Behind Every Exquisite Piece" class="w-full h-full object-cover">
+                <div class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
                   <span class="block text-lg font-bold leading-none">14</span>
                   <span class="text-xs uppercase tracking-wider">Aug</span>
                 </div>
               </div>
               <div class="pt-4 pb-2 flex flex-col flex-grow">
-                <span
-                  class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">BEHIND
-                  THE SCENES</span>
-                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">The Art Behind Every Exquisite
-                  Piece</h3>
+                <span class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">BEHIND THE SCENES</span>
+                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">The Art Behind Every Exquisite Piece</h3>
                 <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
-                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Go behind the scenes and discover
-                  the craftsmanship that makes each piece truly...</p>
+                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Go behind the scenes and discover the craftsmanship that makes each piece truly...</p>
                 <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
                   <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
                   <span class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor" stroke-width="2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
                     </svg>
                   </span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Blog Card 3 -->
-            <div
-              class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
+          <div class="swiper-slide">
+            <div class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
               <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
-                <img src="/images/blgo/3.png" alt="Bridal Jewellery Ideas for a Regal Look"
-                  class="w-full h-full object-cover">
-                <!-- Date Badge -->
-                <div
-                  class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                <img src="/images/blgo/3.png" alt="Bridal Jewellery Ideas for a Regal Look" class="w-full h-full object-cover">
+                <div class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
                   <span class="block text-lg font-bold leading-none">15</span>
                   <span class="text-xs uppercase tracking-wider">Aug</span>
                 </div>
               </div>
               <div class="pt-4 pb-2 flex flex-col flex-grow">
-                <span
-                  class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">STYLE
-                  & TRENDS</span>
-                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Bridal Jewellery Ideas for a
-                  Regal Look</h3>
+                <span class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">STYLE & TRENDS</span>
+                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Bridal Jewellery Ideas for a Regal Look</h3>
                 <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
-                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Handpicked bridal jewellery
-                  inspiration to make your big day unforgettable.</p>
+                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Handpicked bridal jewellery inspiration to make your big day unforgettable.</p>
                 <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
                   <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
                   <span class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24"
-                      stroke="currentColor" stroke-width="2.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
                     </svg>
                   </span>
                 </div>
               </div>
             </div>
-
+          </div>
+          <div class="swiper-slide">
+            <div class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
+              <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
+                <img src="/images/blgo/2.png" alt="The Art Behind Every Exquisite Piece" class="w-full h-full object-cover">
+                <div class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                  <span class="block text-lg font-bold leading-none">14</span>
+                  <span class="text-xs uppercase tracking-wider">Aug</span>
+                </div>
+              </div>
+              <div class="pt-4 pb-2 flex flex-col flex-grow">
+                <span class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">BEHIND THE SCENES</span>
+                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">The Art Behind Every Exquisite Piece</h3>
+                <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
+                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Go behind the scenes and discover the craftsmanship that makes each piece truly...</p>
+                <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
+                  <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
+                  <span class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Next Blog Button -->
-          <button
-            class="absolute -right-3 sm:-right-5 lg:-right-6 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2"
-            aria-label="Next Blog">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          <div class="swiper-slide">
+            <div class="relative mx-auto w-full max-w-[350px] bg-white rounded-xl shadow-xl overflow-hidden border border-[#f3d99e]/40 p-4 flex flex-col">
+              <div class="relative h-[200px] w-full rounded-lg overflow-hidden">
+                <img src="/images/blgo/3.png" alt="Bridal Jewellery Ideas for a Regal Look" class="w-full h-full object-cover">
+                <div class="absolute top-[-0.25rem] left-3 bg-[#951416] text-white text-center rounded px-3 py-1 shadow-md">
+                  <span class="block text-lg font-bold leading-none">15</span>
+                  <span class="text-xs uppercase tracking-wider">Aug</span>
+                </div>
+              </div>
+              <div class="pt-4 pb-2 flex flex-col flex-grow">
+                <span class="inline-block bg-gradient-to-r from-[#F1C165] to-[#D69F42] text-white text-[11px] font-semibold px-3 py-1 rounded-full w-max mb-2 shadow-sm">STYLE & TRENDS</span>
+                <h3 class="raleway-font text-lg font-bold text-[#222] mb-1 leading-snug">Bridal Jewellery Ideas for a Regal Look</h3>
+                <div class="w-8 h-[3px] bg-gradient-to-r from-[#951416] to-[#F1C165] my-2 rounded-full"></div>
+                <p class="raleway-font text-[13px] text-gray-600 mb-4 line-clamp-2">Handpicked bridal jewellery inspiration to make your big day unforgettable.</p>
+                <div class="mt-auto flex items-center justify-between pt-2 border-t border-gray-100">
+                  <a href="#" class="text-[#82141e] font-semibold text-sm hover:underline">Read More »</a>
+                  <span class="w-7 h-7 rounded-full bg-[#951416] text-white flex items-center justify-center text-xs">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
-
       </div>
-    </section>
+
+      <button class="blog-next absolute right-0 sm:right-2 lg:right-0 z-40 w-12 h-12 rounded-full bg-gradient-to-r from-[#DA0F12] to-[#951416] text-[#fdf4db] flex items-center justify-center shadow-lg hover:scale-110 transition-transform cursor-pointer -translate-y-1/2 top-1/2" aria-label="Next Blog">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper('#blog-carousel-section .blogSwiper', {
+        slidesPerView: 1,     /* 1 card on mobile */
+        slidesPerGroup: 1,    /* Shifts 1 card per click */
+        spaceBetween: 20,
+        loop: true,           /* Infinite loop enabled */
+        speed: 600,
+        navigation: {
+          nextEl: '#blog-carousel-section .blog-next',
+          prevEl: '#blog-carousel-section .blog-prev',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2, /* 2 cards on tablets */
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 3, /* 3 cards on laptop/desktop */
+            spaceBetween: 30,
+          },
+        },
+      });
+    });
+  </script>
+
+</section>
 
 
   </main>
