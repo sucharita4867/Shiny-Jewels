@@ -34,62 +34,55 @@
       <!-- HEADER START -->
       <header class="w-full relative z-10">
             <!-- Top Bar Section -->
-            <section
-                  class="w-full bg-[#1c0003] border-b border-[#4d0c14] relative bg-center bg-cover px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-5"
-                  style="background-image: url('images/top-bar-img/topbar-bg.png');">
+ <!-- START: Top Bar Section -->
+<section class="w-full bg-[#1c0003] border-b border-[#4d0c14] relative bg-center bg-cover px-4 sm:px-6 md:px-8 lg:px-16 "
+         style="background-image: url('images/top-bar-img/topbar-bg.png');">
 
-                  <div
-                        class="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 relative min-h-[52px]">
-                        <!-- Left: Address Capsule -->
-                        <div
-                              class="flex items-center gap-2.5 bg-[#470018]/90 border border-[#eebe62]/90 px-4 py-1.5 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] shrink-0 z-10 order-2 md:order-1 p-4">
-                              <i class="fa-solid fa-location-dot text-[#eebe62] text-sm shrink-0"></i>
-                              <span
-                                    class="raleway-font text-[#e0cfc8] text-xs md:text-[13px] font-normal tracking-wide whitespace-nowrap">
-                                    Jadupur, Purba Medinipur, West Bengal - 721641
-                              </span>
-                        </div>
+  <!-- Using CSS Grid: Left, Center (absolute center), Right -->
+  <div class="w-full grid grid-cols-1 md:grid-cols-3 items-center relative min-h-[48px]">
 
-                        <!-- Center: Ornate Gold Frame & Tagline -->
-                        <div
-                              class="order-1 md:order-2 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 relative flex items-center justify-center w-[260px] sm:w-[300px] md:w-[340px] pointer-events-none z-10 shrink-0">
-                              <img src="images/top-bar-img/top-frame.png" alt="Ornate Frame"
-                                    class="w-full h-auto block filter drop-shadow">
-                              <span
-                                    class="absolute inset-0 flex items-center justify-center text-[8.5px] sm:text-[10px] md:text-[11px] text-[#fbf0dc] raleway-font font-medium tracking-wide whitespace-nowrap px-8 select-none">
-                                    Timeless Beauty. Precious Forever.
-                              </span>
-                        </div>
+    <!-- Left: Address Capsule (Hidden on Mobile and Tablet, Visible on Laptop/Desktop lg+) -->
+    <div class="hidden lg:flex items-center gap-2.5 bg-[#470018]/90 border border-[#eebe62]/90 px-4 py-1.5 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] shrink-0 z-10 justify-self-start">
+      <i class="fa-solid fa-location-dot text-[#eebe62] text-sm shrink-0"></i>
+      <span class="raleway-font text-[#e0cfc8] text-xs md:text-[13px] font-normal tracking-wide whitespace-nowrap">
+        Jadupur, Purba Medinipur, West Bengal - 721641
+      </span>
+    </div>
 
-                        <!-- Right: Contact & Socials Capsule -->
-                        <div
-                              class="flex items-center gap-3 bg-[#470018]/90 border border-[#eebe62]/90 px-4 py-1.5 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] shrink-0 z-10 order-3">
-                              <a href="tel:7047119767"
-                                    class="flex items-center gap-1.5 text-[#e0cfc8] hover:text-[#eebe62] transition-colors">
-                                    <i class="fa-solid fa-phone text-[#eebe62] text-xs"></i>
-                                    <span
-                                          class="raleway-font text-xs md:text-[13px] font-normal tracking-wider">7047119767</span>
-                              </a>
-                              <span class="text-[#eebe62]/50 text-sm select-none">|</span>
-                              <div class="flex items-center gap-2">
-                                    <span class="raleway-font text-[#cbb6ad] text-xs hidden lg:inline font-light">Follow
-                                          Us:</span>
-                                    <a href="#"
-                                          class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[11px]">
-                                          <i class="fa-brands fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#"
-                                          class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[11px]">
-                                          <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                    <a href="#"
-                                          class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[10px]">
-                                          <i class="fa-brands fa-youtube"></i>
-                                    </a>
-                              </div>
-                        </div>
-                  </div>
-            </section>
+    <!-- Center: Ornate Gold Frame & Tagline (Hidden on Mobile, Locked strictly in Center for Tablet & Desktop) -->
+    <div class="hidden md:flex md:col-start-2 justify-self-center items-center justify-center w-[220px]  md:w-[260px] lg:w-[325px] pointer-events-none z-10 shrink-0">
+      <div class="relative w-full flex items-center justify-center">
+        <img src="images/top-bar-img/top-frame.png" alt="Ornate Frame" class="w-full h-auto block filter drop-shadow">
+        <span class="absolute inset-0 flex items-center justify-center text-[7.5px] sm:text-[9px] md:text-[10px] lg:text-[10.5px] text-[#fbf0dc] raleway-font font-medium tracking-wide whitespace-nowrap px-6 select-none">
+          Timeless Beauty. Precious Forever.
+        </span>
+      </div>
+    </div>
+
+    <!-- Right: Contact & Socials Capsule (Centered on mobile, pinned cleanly to the right on tablet and desktop) -->
+    <div class="flex items-center gap-2 sm:gap-2.5 md:gap-3 bg-[#470018]/90 border border-[#eebe62]/90 px-3 sm:px-4 py-1.5 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.8)] shrink-0 z-10 justify-self-center md:justify-self-end">
+      <a href="tel:7047119767" class="flex items-center gap-1.5 text-[#e0cfc8] hover:text-[#eebe62] transition-colors">
+        <i class="fa-solid fa-phone text-[#eebe62] text-xs"></i>
+        <span class="raleway-font text-xs md:text-[13px] font-normal tracking-wider">7047119767</span>
+      </a>
+      <span class="text-[#eebe62]/50 text-sm select-none">|</span>
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <span class="raleway-font text-[#cbb6ad] text-xs hidden lg:inline font-light">Follow Us:</span>
+        <a href="#" class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[11px]" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[11px]" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="w-[22px] h-[22px] rounded-full bg-[#eebe62] text-[#2b0005] flex items-center justify-center hover:bg-[#ffc107] hover:scale-105 transition-all text-[10px]" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- END: Top Bar Section -->
 
             <!-- Navbar section -->
             <nav class="w-full relative bg-[#faeedb] bg-no-repeat bg-[length:100%_100%] border-b border-[#e2caa0]/60 select-none"
@@ -306,7 +299,7 @@
 
                   <!-- Peacock Feather (Palak) - Positioned on Left Overlaying the Trust Card -->
                   <div
-                        class="absolute -bottom-8 sm:-bottom-12 lg:-bottom-36 -left-4 sm:-left-6 lg:-left-8 w-[200px] sm:w-[260px] md:w-[320px] lg:w-[350px] pointer-events-none z-30">
+                        class="hidden md:block absolute -bottom-8 sm:-bottom-12 lg:-bottom-36 -left-4 sm:-left-6 lg:-left-8 w-[200px] sm:w-[260px] md:w-[320px] lg:w-[350px] pointer-events-none z-30">
                         <img src="images/banner-img/palak.png" alt="Peacock Feather"
                               class="w-[80%] h-auto object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.28)]">
                   </div>
