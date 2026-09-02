@@ -401,143 +401,223 @@
             </section>
 
             <!-- 2. SHOP BY CATEGORY SECTION -->
-            <section
-                  class="w-full relative bg-[#fbf5ea] bg-cover bg-center select-none pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 overflow-hidden">
+           <section id="shop-by-category-section" class="w-full relative bg-[#fbf5ea] bg-cover bg-center select-none pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 overflow-hidden">
 
-                  <!-- Left Side Peacock Background Accent -->
-                  <div
-                        class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -left-0 sm:-left-0 lg:-left-0 w-[230px] sm:w-[270px] md:w-[310px] lg:w-[340px] pointer-events-none z-10">
-                        <img src="images/Category/category-bg-img.png" alt="Peacock Accent"
-                              class="w-full h-auto object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
-                  </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
 
-                  <!-- Bottom-Right Feather Accent -->
-                  <div
-                        class="absolute -bottom-24 sm:-bottom-28 lg:-bottom-36 -right-6 sm:-right-8 lg:-right-10 w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] pointer-events-none z-10 rotate-[-15deg] scale-x-[-1]">
-                        <img src="images/banner-img/palak.png" alt="Feather Accent"
-                              class="w-full h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.18)]" [cite:
-                              10]>
-                  </div>
-                  <!-- Section Content Container -->
-                  <div class="max-w-[1440px] w-full mx-auto 
-                         relative z-20 flex flex-col items-center">
+  <style>
+    #shop-by-category-section .categorySwiper .swiper-slide {
+      width: calc(50% - 7px);
+      height: auto;
+      display: flex;
+      flex-shrink: 0;
+    }
+    @media (min-width: 640px) {
+      #shop-by-category-section .categorySwiper .swiper-slide {
+        width: calc(33.333% - 11px);
+      }
+    }
+    @media (min-width: 1024px) {
+      #shop-by-category-section .categorySwiper .swiper-slide {
+        width: calc(16.666% - 17px);
+      }
+    }
 
-                        <!-- Section Header: Ornate Bracket & Title -->
-                        <div class="flex flex-col items-center text-center mb-10 sm:mb-12">
-                              <div
-                                    class="relative flex items-center justify-center w-[260px] sm:w-[320px] md:w-[360px] -mb-1">
-                                    <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Top"
-                                          class="w-full h-auto object-contain">
-                              </div>
-                              <h2
-                                    class="playfair-font font-bold text-[28px] sm:text-[34px] md:text-[38px] text-[#82141e] tracking-normal">
-                                    Shop by Category
-                              </h2>
-                        </div>
-                        <!-- 6-Category Cards Grid -->
-                        <div
-                              class="w-[88%] max-w-[1240px] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4 lg:gap-5">
+    #shop-by-category-section .swiper {
+      width: 100%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      overflow: hidden;
+    }
 
-                              <!-- Card 1: Necklace -->
-                              <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3"
-                                    style="background-image: url('images/Category/rectangle.png');">
-                                    <div class="w-full flex items-center justify-center pt-1">
-                                          <img src="images/Category/necklace.png" alt="Necklace"
-                                                class="w-[90%] h-auto object-contain" [cite: 7]>
-                                    </div>
-                                    <span
-                                          class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1.5 tracking-wide">
-                                          Necklace
-                                    </span>
-                              </div>
+    #shop-by-category-section .swiper-wrapper {
+      display: flex;
+    }
 
-                              <!-- Card 2: Earrings -->
-                              <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3"
-                                    style="background-image: url('images/Category/rectangle.png');">
-                                    <div class="w-full flex items-center justify-center">
-                                          <img src="images/Category/earrings.png" alt="Earrings"
-                                                class="w-[90%] h-auto object-contain">
-                                    </div>
-                                    <span
-                                          class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] tracking-wide">
-                                          Earrings
-                                    </span>
-                              </div>
+    /* Custom Pagination Bullets Styling */
+    #shop-by-category-section .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: #dcb174;
+      opacity: 1;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-                              <!-- Card 3: Bangles -->
-                              <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3"
-                                    style="background-image: url('images/Category/rectangle.png');">
-                                    <div class="w-full flex items-center justify-center pt-1">
-                                          <img src="images/Category/bangles.png" alt="Bangles"
-                                                class="w-[90%] h-auto object-contain" [cite: 7]>
-                                    </div>
-                                    <span
-                                          class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
-                                          Bangles
-                                    </span>
-                              </div>
+    #shop-by-category-section .swiper-pagination-bullet-active {
+      background: #82141e;
+      width: 10px;
+      height: 10px;
+    }
+  </style>
 
-                              <!-- Card 4: Rings -->
-                              <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3"
-                                    style="background-image: url('images/Category/rectangle.png');">
-                                    <div class="w-full flex items-center justify-center pt-1">
-                                          <img src="images/Category/rings.png" alt="Rings"
-                                                class="w-[90%] h-auto object-contain" [cite: 7]>
-                                    </div>
-                                    <span
-                                          class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
-                                          Rings
-                                    </span>
-                              </div>
+  <div class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -left-0 sm:-left-0 lg:-left-0 w-[230px] sm:w-[270px] md:w-[310px] lg:w-[340px] pointer-events-none z-10">
+    <img src="images/Category/category-bg-img.png" alt="Peacock Accent" class="w-full h-auto object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
+  </div>
 
-                              <!-- Card 5: Pendants -->
-                              <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3"
-                                    style="background-image: url('images/Category/rectangle.png');">
-                                    <div class="w-full flex items-center justify-center pt-1">
-                                          <img src="images/Category/pendants.png" alt="Pendants"
-                                                class="w-[90%] h-auto object-contain" [cite: 7]>
-                                    </div>
-                                    <span
-                                          class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
-                                          Pendants
-                                    </span>
-                              </div>
+  <div class="absolute -bottom-24 sm:-bottom-28 lg:-bottom-36 -right-6 sm:-right-8 lg:-right-10 w-[180px] sm:w-[220px] md:w-[260px] lg:w-[300px] pointer-events-none z-10 rotate-[-15deg] scale-x-[-1]">
+    <img src="images/banner-img/palak.png" alt="Feather Accent" class="w-full h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.18)]">
+  </div>
 
-                              <!-- Card 6: Bracelets -->
-                              <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3"
-                                    style="background-image: url('images/Category/rectangle.png');">
-                                    <div class="w-full flex items-center justify-center pt-1">
-                                          <img src="images/Category/bracelets.png" alt="Bracelets"
-                                                class="w-[90%] h-auto object-contain" [cite: 7]>
-                                    </div>
-                                    <span
-                                          class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
-                                          Bracelets
-                                    </span>
-                              </div>
+  <div class="max-w-[1440px] w-full mx-auto relative z-20 flex flex-col items-center">
 
-                        </div>
+    <div class="flex flex-col items-center text-center mb-10 sm:mb-12">
+      <div class="relative flex items-center justify-center w-[260px] sm:w-[320px] md:w-[360px] -mb-1">
+        <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Top" class="w-full h-auto object-contain">
+      </div>
+      <h2 class="playfair-font font-bold text-[28px] sm:text-[34px] md:text-[38px] text-[#82141e] tracking-normal">
+        Shop by Category
+      </h2>
+    </div>
 
-                        <!-- Carousel Indicators -->
-                        <div class="flex items-center justify-center gap-2.5 mt-7 sm:mt-9">
-                              <span class="w-2.5 h-2.5 rounded-full bg-[#82141e]"></span>
-                              <span class="w-2.5 h-2.5 rounded-full bg-[#dcb174]"></span>
-                        </div>
+    <div class="w-[88%] max-w-[1240px] relative flex items-center justify-center">
+      <div class="swiper categorySwiper w-full">
+        <div class="swiper-wrapper">
 
-                        <!-- CTA: View All Categories Button -->
-                        <a href="#"
-                              class="relative inline-flex items-center justify-center w-[210px] sm:w-[230px] h-[48px] sm:h-[52px] group transition-transform duration-200 hover:scale-105 mt-6 sm:mt-7">
-                              <img src="images/navbar-img/btn-bg.png" alt="View All Categories"
-                                    class="absolute inset-0 w-full h-full object-fill drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
-                              <span
-                                    class="relative z-10 text-[#fdf4db] raleway-font font-semibold text-[11.5px] sm:text-[12.5px] tracking-wider pt-0.5">
-                                    View All Categories
-                              </span>
-                        </a>
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center pt-1">
+                <img src="images/Category/necklace.png" alt="Necklace" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1.5 tracking-wide">
+                Necklace
+              </span>
+            </div>
+          </div>
 
-                  </div>
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center">
+                <img src="images/Category/earrings.png" alt="Earrings" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] tracking-wide">
+                Earrings
+              </span>
+            </div>
+          </div>
 
-            </section>
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center pt-1">
+                <img src="images/Category/bangles.png" alt="Bangles" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
+                Bangles
+              </span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center pt-1">
+                <img src="images/Category/necklace.png" alt="Necklace" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1.5 tracking-wide">
+                Necklace
+              </span>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center">
+                <img src="images/Category/earrings.png" alt="Earrings" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] tracking-wide">
+                Earrings
+              </span>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center pt-1">
+                <img src="images/Category/bangles.png" alt="Bangles" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
+                Bangles
+              </span>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center pt-1">
+                <img src="images/Category/rings.png" alt="Rings" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
+                Rings
+              </span>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center pt-1">
+                <img src="images/Category/pendants.png" alt="Pendants" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
+                Pendants
+              </span>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="rounded-xl flex flex-col items-center justify-center gap-1 bg-no-repeat bg-[length:100%_100%] aspect-[1/1.3] p-3 w-full" style="background-image: url('images/Category/rectangle.png');">
+              <div class="w-full flex items-center justify-center pt-1">
+                <img src="images/Category/bracelets.png" alt="Bracelets" class="w-[90%] h-auto object-contain">
+              </div>
+              <span class="raleway-font font-semibold text-[14.5px] sm:text-[16px] text-[#82141e] pb-1 tracking-wide">
+                Bracelets
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination category-pagination !relative !flex items-center justify-center gap-2.5 mt-7 sm:mt-9"></div>
+
+    <a href="#" class="relative inline-flex items-center justify-center w-[210px] sm:w-[230px] h-[48px] sm:h-[52px] group transition-transform duration-200 hover:scale-105 mt-6 sm:mt-7">
+      <img src="images/navbar-img/btn-bg.png" alt="View All Categories" class="absolute inset-0 w-full h-full object-fill drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
+      <span class="relative z-10 text-[#fdf4db] raleway-font font-semibold text-[11.5px] sm:text-[12.5px] tracking-wider pt-0.5">
+        View All Categories
+      </span>
+    </a>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      new Swiper('#shop-by-category-section .categorySwiper', {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 14,
+        loop: true,
+        speed: 600,
+        pagination: {
+          el: '#shop-by-category-section .category-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+            spaceBetween: 16,
+          },
+          1024: {
+            slidesPerView: 6,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+          },
+        },
+      });
+    });
+  </script>
+
+</section>
 
             <!-- 3. SHOP BY GENDER SECTION -->
             <section
