@@ -30,14 +30,13 @@
 
 </head>
 
-<body class="bg-gray-100 min-h-screen">
+<body class=" min-h-screen">
   <!-- HEADER START -->
   <header class="w-full relative z-10">
     <!-- Top Bar Section -->
     <!-- START: Top Bar Section -->
-    <section
-      class="w-full bg-[#1c0003] border-b border-[#4d0c14] relative bg-center bg-cover px-4 sm:px-6 md:px-8 lg:px-16 "
-      style="background-image: url('images/top-bar-img/topbar-bg.png');">
+    <section class="w-full  relative px-4 sm:px-6 md:px-8  lg:px-16 "
+      style="background-image: url('images/top-bar-img/topbar-bg.png');    ">
 
       <!-- Using CSS Grid: Left, Center (absolute center), Right -->
       <div class="w-full grid grid-cols-1 md:grid-cols-3 items-center relative min-h-[48px]">
@@ -263,9 +262,9 @@
 
             <!-- Where Tradition Golden Bracket -->
             <div
-              class="relative flex items-center justify-center w-[250px] sm:w-[230px] md:w-[240px] h-[46px] sm:h-[52px] mb-3">
+              class="relative flex items-center justify-center  w-[250px] sm:w-[230px] md:w-[240px] h-[46px] sm:h-[52px] mb-3">
               <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Frame"
-                class="absolute inset-0 w-full h-full object-contain pointer-events-none">
+                class="absolute inset-0 pb-4 w-full h-full object-contain pointer-events-none">
               <span
                 class="relative z-10 playfair-font font-bold text-[#140003] text-[17px] sm:text-[20px] md:text-[22px] tracking-wide pt-4">
                 Where Tradition
@@ -343,8 +342,9 @@
 
         <!-- Main Maroon Box (Half on banner, half on body) -->
         <div
-          class="w-full  rounded-[18px] sm:rounded-[22px] shadow-[0_15px_35px_rgba(0,0,0,0.45)] px-4 sm:px-6 lg:px-8 pt-8 sm:pt-9 pb-5 sm:pb-6 relative bg-cover bg-center"
-          style="background-image: url('images/top-bar-img/topbar-bg.png');">
+          class="w-full rounded-[18px] sm:rounded-[22px] shadow-[0_15px_35px_rgba(0,0,0,0.45)] px-4 sm:px-6 lg:px-8 pt-8 sm:pt-9 pb-5 sm:pb-6 relative "
+          style="background-image: url('images/top-bar-img/topbar-bg.png'); ;">
+
 
           <!-- Top Centered Ornate Golden Bracket (Half on banner, half on card) -->
           <div
@@ -358,7 +358,7 @@
 
             <!-- Badge 1: 100% Hallmarked Jewellery -->
             <div
-              class="flex items-center gap-3 bg-[#47000b]/90 border border-[#7b1d28]/90 hover:border-[#dfa135] px-4 py-3 sm:py-3.5 rounded-xl shadow-[inset_0_1px_3px_rgba(0,0,0,0.7)] transition-colors duration-200 cursor-default">
+              class="flex items-center gap-3 bg-[#47000b]/90 border border-[#7b1d28]/90 hover:border-[#dfa135]  px-4 py-3 sm:py-3.5 rounded-xl shadow-[inset_0_1px_3px_rgba(0,0,0,0.7)] transition-colors duration-200 cursor-default">
               <div
                 class="w-[28px] h-[28px] shrink-0 flex items-center justify-center text-[#dfa135] text-base sm:text-lg">
                 <i class="fa-regular fa-gem"></i>
@@ -473,7 +473,7 @@
       </style>
 
       <div
-        class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -left-0 sm:-left-0 lg:-left-0 w-[230px] sm:w-[270px] md:w-[310px] lg:w-[340px] pointer-events-none z-10">
+        class="absolute top-[2%] hidden md:block sm:top-[4%] lg:top-[6%] -left-0 sm:-left-0 lg:-left-0 w-[230px] sm:w-[270px] md:w-[310px] lg:w-[340px] pointer-events-none z-10">
         <img src="images/Category/category-bg-img.png" alt="Peacock Accent"
           class="w-full h-auto object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
       </div>
@@ -918,8 +918,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                 <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -959,8 +961,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                 <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -999,8 +1003,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -1040,8 +1046,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -1079,8 +1087,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)] w-full">
-                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -1120,8 +1130,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -1159,8 +1171,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -1527,7 +1541,7 @@
 
 
     <!-- 6. caurosel SECTION -->
-    <section class="relative w-full bg-white py-10 overflow-hidden">
+    <section class="relative w-full  py-10 overflow-hidden">
 
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -1667,6 +1681,22 @@
                 <img src="/images/product-showcase/5.png" alt="Abstract 5" />
               </div>
 
+              <div class="swiper-slide">
+                <img src="/images/product-showcase/1.png" alt="Abstract 1" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="/images/product-showcase/2.png" alt="Abstract 2" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="/images/product-showcase/1.png" alt="Abstract 1" />
+              </div>
+
+              <div class="swiper-slide">
+                <img src="/images/product-showcase/2.png" alt="Abstract 2" />
+              </div>
+
             </div>
           </div>
 
@@ -1689,7 +1719,7 @@
           grabCursor: true,
           centeredSlides: true,
           slidesPerView: 'auto',
-          initialSlide: 2,      // Starts the carousel properly from index 2 (so slide 2 is left, slide 3 is center)
+          initialSlide: 3,      // Starts the carousel properly from index 2 (so slide 2 is left, slide 3 is center)
           loop: false,          // Disabled loop so images don't hide or cluster unpredictably at start
           speed: 600,
           coverflowEffect: {
@@ -1712,8 +1742,92 @@
     </section>
 
     <!-- 7. Festive Offer SECTION -->
-    <section>
-      <!-- <h4 class="p-10 border border-black"> Festive Offer</h4> -->
+    <section class="relative font-serif flex items-center justify-center min-h-[460px] overflow-hidden py-10">
+
+      <!-- Left Side Peacock Background -->
+      <img src="images/Festive-Offer/maur.png" alt="Peacock Motif"
+        class="hidden lg:block  top-1/2 md:top-[4%] lg:top-1/3 scale-x-[-1] absolute left-[-2%]  rotate-20 sm:-left-80 -translate-y-1/2 h-[65%] sm:h-[80%] lg:h-[110%] w-auto object-contain object-left pointer-events-none z-0 "
+        style="
+    rotate: 25deg;
+">
+
+      <!-- Main Content Wrapper -->
+      <div class="w-full  mx-auto flex flex-col items-center relative z-10 ">
+
+        <!-- Top Header -->
+        <div class="flex flex-col items-center text-center mb-8 lg:mb-10">
+          <div class="relative flex items-center justify-center w-[260px] sm:w-[320px] md:w-[360px] -mb-2">
+            <img src="images/banner-img/banner-golden-bracket.png" alt="Ornate Top"
+              class="w-full h-auto object-contain">
+          </div>
+          <h2
+            class="playfair-font font-bold text-[28px] sm:text-[34px] md:text-[38px] text-[#82141e] tracking-normal mt-2">
+            Festive Offer
+          </h2>
+        </div>
+
+        <!-- 2-Column Grid -->
+        <div class="w-full grid grid-cols-1 lg:grid-cols-2  items-center justify-items-center">
+
+          <!-- Left Column: Countdown Glass Card (Overlapping Feathers) -->
+          <div class="w-full flex justify-center lg:justify-end relative">
+
+
+            <div
+              class="w-full absolute max-w-[34rem] h-[15rem] overflow-hidden bg-cover flex flex-col justify-center items-center bg-center bg-no-repeat bg-white/70 backdrop-blur-md border border-[#d4a017]/50 rounded-2xl p-6 sm:p-7 shadow-[0_10px_30px_rgba(180,40,40,0.12)] text-center relative z-20"
+              style="background-image: url('/images/Festive-Offer/festive-bg.png');">
+              <div class="flex items-center justify-center gap-3 mb-5">
+                <span class="w-8 sm:w-12 h-[1px] bg-[#a93226]"></span>
+                <span class="text-[#8b181b] text-sm sm:text-base font-semibold tracking-wide whitespace-nowrap">
+                  Limited Time Only
+                </span>
+                <span class="w-8 sm:w-12 h-[1px] bg-[#a93226]"></span>
+              </div>
+
+              <div class="flex justify-center gap-2.5 sm:gap-3.5 mb-5">
+                <div
+                  class="w-12 h-11 sm:w-14 sm:h-13 bg-gradient-to-b from-[#951416] to-[#DA0F12] border border-[#ffd700]/40 rounded-lg flex items-center justify-center shadow-[0_4px_12px_rgba(139,24,27,0.4)]">
+                  <span class="text-white text-lg sm:text-xl font-semibold tracking-wider">02</span>
+                </div>
+                <div
+                  class="w-12 h-11 sm:w-14 sm:h-13 bg-gradient-to-b from-[#991316] to-[#DA0F12] border border-[#ffd700]/40 rounded-lg flex items-center justify-center shadow-[0_4px_12px_rgba(139,24,27,0.4)]">
+                  <span class="text-white text-lg sm:text-xl font-semibold tracking-wider">18</span>
+                </div>
+                <div
+                  class="w-12 h-11 sm:w-14 sm:h-13 bg-gradient-to-b from-[#991316] to-[#DA0F12] border border-[#ffd700]/40 rounded-lg flex items-center justify-center shadow-[0_4px_12px_rgba(139,24,27,0.4)]">
+                  <span class="text-white text-lg sm:text-xl font-semibold tracking-wider">45</span>
+                </div>
+                <div
+                  class="w-12 h-11 sm:w-14 sm:h-13 bg-gradient-to-b from-[#991316] to-[#DA0F12] border border-[#ffd700]/40 rounded-lg flex items-center justify-center shadow-[0_4px_12px_rgba(139,24,27,0.4)]">
+                  <span class="text-white text-lg sm:text-xl font-semibold tracking-wider">30</span>
+                </div>
+              </div>
+
+              <p class="text-xs sm:text-sm text-[#3b302a] font-medium tracking-tight">
+                Flat 20% Off on making charges
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Festive Badge -->
+          <div class="w-full flex justify-center lg:justify-start">
+            <div class="relative flex items-center justify-center  w-full  ">
+
+              <img src="images/Festive-Offer/Festive-Offer-main-img.png" alt="Festive Special Offer"
+                class="w-auto h-auto object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)] select-none pointer-events-none">
+
+              <div class="absolute inset-0 flex items-center text-xl justify-center text-center pointer-events-none ">
+                <h3
+                  class="text-white font-medium text-xl md:text-3xl  leading-snug drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                  Festive<br>Special<br>Offer
+                </h3>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <!-- 8. best seller SECTION -->
@@ -1810,18 +1924,26 @@
             <div class="swiper-wrapper">
 
               <div class="swiper-slide">
-                <div class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)] w-full">
-                  
-                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                <div
+                  class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)] w-full">
 
-                  <div class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+
+                  <div
+                    class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
                     <img src="images/Best-Seller/1.png" alt="Floral Gold Necklace" class="w-full h-full object-cover">
                     <div class="absolute top-3 right-0 flex flex-col gap-1 z-20">
-                      <button class="w-[30px] h-[26px] bg-gradient-to-r from-[#DA0F12] to-[#951416] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors" title="View">
+                      <button
+                        class="w-[30px] h-[26px] bg-gradient-to-r from-[#DA0F12] to-[#951416] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                        title="View">
                         <i class="fa-regular fa-eye text-xs"></i>
                       </button>
-                      <button class="w-[30px] h-[26px] bg-gradient-to-r from-[#DA0F12] to-[#951416] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors" title="WhatsApp">
+                      <button
+                        class="w-[30px] h-[26px] bg-gradient-to-r from-[#DA0F12] to-[#951416] text-white flex items-center justify-center rounded-l-md shadow-md transition-colors"
+                        title="WhatsApp">
                         <i class="fa-brands fa-whatsapp text-sm"></i>
                       </button>
                     </div>
@@ -1831,7 +1953,8 @@
                     <h3 class="playfair-font font-bold text-[18px] sm:text-[19px] text-[#7a131b] leading-tight mb-1">
                       Classic Gold Chain
                     </h3>
-                    <p class="raleway-font text-[11px] sm:text-[11.5px] text-[#333333] font-medium leading-relaxed max-w-[210px] mb-2.5">
+                    <p
+                      class="raleway-font text-[11px] sm:text-[11.5px] text-[#333333] font-medium leading-relaxed max-w-[210px] mb-2.5">
                       Elegant 22K gold chain crafted for effortless
                     </p>
                     <div class="flex items-center gap-2">
@@ -1845,8 +1968,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -1884,8 +2009,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
                     <img src="images/Best-Seller/3.png" alt="Classic Gold Bracelet" class="w-full h-full object-cover">
@@ -1923,8 +2050,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                 <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -1961,8 +2090,10 @@
               <div class="swiper-slide">
                 <div
                   class="bg-white rounded-[26px] p-2 relative border border-[#eab239] border-2 flex flex-col items-center justify-center shadow-[0_12px_30px_rgba(0,0,0,0.08)]  w-full">
-                 <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border" class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
-    <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border" class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Bottom Golden Border"
+                    class="absolute -top-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 rotate-180 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
+                  <img src="images/New-Collection-img/golden-breket.png" alt="Top Golden Border"
+                    class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain pointer-events-none z-30 drop-shadow-[0_2px_6px_rgba(218,165,32,0.5)]">
 
                   <div
                     class="w-full h-[215px] sm:h-[225px] rounded-[20px] overflow-hidden relative z-10 flex items-center justify-center bg-[#fdfcf9]">
@@ -2065,19 +2196,19 @@
 
       <!-- Left Side Peacock Background Accent -->
       <div
-        class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -left-0 sm:-left-0 lg:-left-1 w-32 sm:w-[270px] md:w-[310px] lg:w-52 pointer-events-none z-10">
+        class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -left-0 sm:-left-0 lg:-left-1 w-32 sm:w-[270px] md:w-[310px] hidden lg:block lg:w-52 pointer-events-none z-10">
         <img src="images/Category/category-bg-img.png" alt="Peacock Accent Left"
           class="w-full h-auto object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
       </div>
 
       <!-- Right Side Peacock Background Accent (Flipped & Right Aligned) -->
       <div
-        class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -right-0 sm:-right-0 lg:-right-1 w-32 sm:w-[270px] md:w-[310px] lg:w-52 pointer-events-none z-10 scale-x-[-1]">
+        class="absolute top-[2%] sm:top-[4%] lg:top-[6%] -right-0 sm:-right-0 lg:-right-1 w-32 sm:w-[270px] md:w-[310px] hidden lg:block lg:w-52 pointer-events-none z-10 scale-x-[-1]">
         <img src="images/Category/category-bg-img.png" alt="Peacock Accent Right"
           class="w-full h-auto object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.12)]">
       </div>
 
-      <div class="w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4">
+      <div class="mx-auto container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4">
 
         <div
           class="relative border border-[#a33536] items-center rounded-[28px] z-10 shadow-[0_15px_35px_rgba(130,20,30,0.08)] bg-white pb-6"
@@ -2087,7 +2218,7 @@
             <img src="images/Shop-by-Pricing/1.png" alt="Below 20K" class="w-[85%] h-[85%] object-cover rounded-[14px]">
           </div>
           <a href="#"
-            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-r from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
+            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-b from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
             Below 20 K <span class="ml-1 text-lg font-normal">&gt;</span>
           </a>
         </div>
@@ -2100,7 +2231,7 @@
             <img src="images/Shop-by-Pricing/2.png" alt="20K - 50K" class="w-[85%] h-[85%] object-cover rounded-[14px]">
           </div>
           <a href="#"
-            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-r from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
+            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-b from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
             20K - 50K <span class="ml-1 text-lg font-normal">&gt;</span>
           </a>
         </div>
@@ -2113,7 +2244,7 @@
             <img src="images/Shop-by-Pricing/3.png" alt="50K - 1L" class="w-[85%] h-[85%] object-cover rounded-[14px]">
           </div>
           <a href="#"
-            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-r from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
+            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-b from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide">
             50K - 1L <span class="ml-1 text-lg font-normal">&gt;</span>
           </a>
         </div>
@@ -2126,7 +2257,7 @@
             <img src="images/Shop-by-Pricing/4.png" alt="Above 1L" class="w-[85%] h-[85%] object-core rounded-[14px]">
           </div>
           <a href="#"
-            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-r from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide transition-transform hover:scale-105">
+            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[85%] max-w-[210px] h-[46px] sm:h-[50px] rounded-full bg-gradient-to-b from-[#dfba6f] via-[#cca254] to-[#c29643] shadow-[0_6px_15px_rgba(204,162,84,0.4)] border border-[#fff2cb] flex items-center justify-center text-[#580d14] playfair-font font-bold z-20 text-[14px] sm:text-[15px] tracking-wide transition-transform hover:scale-105">
             Above 1L <span class="ml-1 text-lg font-normal">&gt;</span>
           </a>
         </div>
@@ -2146,10 +2277,9 @@
 
           <!-- Top Centered Lotus & Gold Header Arch Ornament -->
           <div
-            class="absolute -top-34
-                                     sm:-top-[26px] left-0 right-0 w-full flex items-center justify-center pointer-events-none z-30">
+            class="absolute -top-34 sm:-top-[26px] left-0 right-0 w-full flex items-center justify-center pointer-events-none ">
             <img src="images/banner-img/banner-head-style.png" alt="Ornate Top Arch"
-              class="w-[92%] max-w-[1050px] h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]">
+              class="w-[92%]  h-auto object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]">
           </div>
 
           <!-- Left Column: Bridal Model Image -->
@@ -2182,7 +2312,8 @@
 
             <!-- CTA Shop Now Button -->
             <a href="#"
-              class="relative inline-flex items-center justify-center w-[160px] sm:w-[180px] h-[44px] sm:h-[48px] transition-transform duration-200 hover:scale-105 group">
+              class="relative inline-flex items-center justify-center m
+              b-10 lg:mb-0 w-[160px] sm:w-[180px] h-[44px] sm:h-[48px] transition-transform duration-200 hover:scale-105 group">
               <img src="images/navbar-img/btn-bg.png" alt="Shop Now"
                 class="absolute inset-0 w-full h-full object-fill drop-shadow-[0_4px_10px_rgba(0,0,0,0.4)]">
               <span
@@ -2204,7 +2335,7 @@
 
               <!-- Peacock Image Placed Directly on Top of White Stand Center -->
               <img src="images/WEDDING-COLLECTION/pauor-img.png" alt="Peacock"
-                class="absolute bottom-[95%] left-1/2 -translate-x-[42%] w-34 h-auto object-contain z-30 drop-shadow-lg">
+                class="absolute hidden lg:block bottom-[95%] left-1/2 -translate-x-[42%] w-34 h-auto object-contain z-30 drop-shadow-lg">
 
               <!-- Peacock Feather (Palak) Layered Over the Peacock & Stand -->
               <img src="images/WEDDING-COLLECTION/palak.png" alt="Palak Feather"
@@ -2251,16 +2382,24 @@
               class="w-full bg-[#82141e] border border-[#f1c165] shadow-[0_10px_25px_rgba(130,20,30,0.25)] flex flex-col items-center justify-center px-4 pt-16 sm:pt-18 pb-6 rounded-br-3xl rounded-tl-3xl relative bg-cover bg-center"
               style="background-image: url('images/Finest-Jewellery/n2.png'); background-size: cover; background-position: top-center;">
               <!-- Inner White Content Container -->
-              <div class="w-full bg-white border border-[#eab239] rounded-[14px] py-2 px-3 text-center shadow-inner"
+              <div
+                class="w-[80%] mx-auto bg-white border border-[#eab239] rounded-[14px] py-2 px-3 text-center shadow-inner"
                 style="background-image: url('images/Finest-Jewellery/cart-sort-bg.png'); background-size: cover; background-position: top-center;">
+
                 <h3 class="playfair-font font-bold text-[17px] sm:text-[19px] text-[#7a131b] tracking-wide">
                   Faster Delivery
                 </h3>
+                <span class="absolute bottom-0 right-0  h-10 w-10 z-50 "
+                  style="background-image: url('images/Finest-Jewellery/golden-dot-bg.png'); background-size: cover; background-position: top-center;">
+                </span>
+                <span class="absolute top-0 left-0 rotate-[179deg] h-10 w-10 z-50  "
+                  style="background-image: url('images/Finest-Jewellery/golden-dot-bg.png'); background-size: cover; background-position: top-center;">
+                </span>
               </div>
             </div>
             <!-- Top Floating Icon Badge -->
             <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-20 sm:h-20 rounded-br-3xl rounded-tl-3xl bg-gradient-to-b from-[#fbead0] via-[#f7dab3] to-[#ebd1a4] border-2 border-[#f1c165] shadow-[0_8px_20px_rgba(0,0,0,0.18)] flex items-center justify-center">
+              class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-20 sm:h-20 rounded-br-3xl rounded-tl-3xl bg-[#d69f42] border-2 border-[#f1c165] shadow-[0_8px_20px_rgba(0,0,0,0.18)] flex items-center justify-center">
               <div class="w-10 h-10 sm:w-12 sm:h-12 text-[#7a131b] no-repeat bg-cover bg-center text-xl sm:text-2xl"
                 style="background-image: url('images/Finest-Jewellery/car.png');"></div>
             </div>
@@ -2273,16 +2412,23 @@
               class="w-full bg-[#82141e] border border-[#f1c165] shadow-[0_10px_25px_rgba(130,20,30,0.25)] flex flex-col items-center justify-center px-4 pt-16 sm:pt-18 pb-6 rounded-br-3xl rounded-tl-3xl relative bg-cover bg-center"
               style="background-image: url('images/Finest-Jewellery/n2.png'); background-size: cover; background-position: top-center;">
               <!-- Inner White Content Container -->
-              <div class="w-full bg-white border border-[#eab239] rounded-[14px] py-2 px-3 text-center shadow-inner"
+              <div
+                class="w-[80%] mx-auto bg-white border border-[#eab239] rounded-[14px] py-2 px-3 text-center shadow-inner"
                 style="background-image: url('images/Finest-Jewellery/cart-sort-bg.png'); background-size: cover; background-position: top-center;">
                 <h3 class="playfair-font font-bold text-[17px] sm:text-[19px] text-[#7a131b] tracking-wide">
                   Best Offer in Price
                 </h3>
+                <span class="absolute bottom-0 right-0  h-10 w-10 z-50 "
+                  style="background-image: url('images/Finest-Jewellery/golden-dot-bg.png'); background-size: cover; background-position: top-center;">
+                </span>
+                <span class="absolute top-0 left-0 rotate-[179deg] h-10 w-10 z-50  "
+                  style="background-image: url('images/Finest-Jewellery/golden-dot-bg.png'); background-size: cover; background-position: top-center;">
+                </span>
               </div>
             </div>
             <!-- Top Floating Icon Badge -->
             <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-20 sm:h-20 rounded-br-3xl rounded-tl-3xl bg-gradient-to-b from-[#fbead0] via-[#f7dab3] to-[#ebd1a4] border-2 border-[#f1c165] shadow-[0_8px_20px_rgba(0,0,0,0.18)] flex items-center justify-center">
+              class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-20 sm:h-20 rounded-br-3xl rounded-tl-3xl bg-[#d69f42] border-2 border-[#f1c165] shadow-[0_8px_20px_rgba(0,0,0,0.18)] flex items-center justify-center">
               <div class="w-10 h-10 sm:w-12 sm:h-12 text-[#7a131b] no-repeat bg-cover bg-center text-xl sm:text-2xl"
                 style="background-image: url('images/Finest-Jewellery/2.png');"></div>
             </div>
@@ -2295,16 +2441,22 @@
               class="w-full bg-[#82141e] border border-[#f1c165] shadow-[0_10px_25px_rgba(130,20,30,0.25)] flex flex-col items-center justify-center px-4 pt-16 sm:pt-18 pb-6 rounded-br-3xl rounded-tl-3xl relative bg-cover bg-center"
               style="background-image: url('images/Finest-Jewellery/n2.png'); background-size: cover; background-position: top-center;">
               <!-- Inner White Content Container -->
-              <div class="w-full bg-white border border-[#eab239] rounded-[14px] py-2 px-3 text-center shadow-inner"
+              <div class="w-[90%] mx-auto bg-white border border-[#eab239] rounded-[14px] py-2 text-center shadow-inner"
                 style="background-image: url('images/Finest-Jewellery/cart-sort-bg.png'); background-size: cover; background-position: top-center;">
                 <h3 class="playfair-font font-bold text-[17px] sm:text-[19px] text-[#7a131b] tracking-wide">
                   Advance Gold Booking
                 </h3>
+                <span class="absolute bottom-0 right-0  h-10 w-10 z-50 "
+                  style="background-image: url('images/Finest-Jewellery/golden-dot-bg.png'); background-size: cover; background-position: top-center;">
+                </span>
+                <span class="absolute top-0 left-0 rotate-[179deg] h-10 w-10 z-50  "
+                  style="background-image: url('images/Finest-Jewellery/golden-dot-bg.png'); background-size: cover; background-position: top-center;">
+                </span>
               </div>
             </div>
             <!-- Top Floating Icon Badge -->
             <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-20 sm:h-20 rounded-br-3xl rounded-tl-3xl bg-gradient-to-b from-[#fbead0] via-[#f7dab3] to-[#ebd1a4] border-2 border-[#f1c165] shadow-[0_8px_20px_rgba(0,0,0,0.18)] flex items-center justify-center">
+              class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-20 sm:h-20 rounded-br-3xl rounded-tl-3xl bg-[#d69f42] border-2 border-[#f1c165] shadow-[0_8px_20px_rgba(0,0,0,0.18)] flex items-center justify-center">
               <div class="w-10 h-10 sm:w-12 sm:h-12 text-[#7a131b] no-repeat bg-cover bg-center text-xl sm:text-2xl"
                 style="background-image: url('images/Finest-Jewellery/3.png');"></div>
             </div>
@@ -2317,16 +2469,23 @@
               class="w-full bg-[#82141e] border border-[#f1c165] shadow-[0_10px_25px_rgba(130,20,30,0.25)] flex flex-col items-center justify-center px-4 pt-16 sm:pt-18 pb-6 rounded-br-3xl rounded-tl-3xl relative bg-cover bg-center"
               style="background-image: url('images/Finest-Jewellery/n2.png'); background-size: cover; background-position: top-center;">
               <!-- Inner White Content Container -->
-              <div class="w-full bg-white border border-[#eab239] rounded-[14px] py-2 px-3 text-center shadow-inner"
+              <div
+                class="w-[80%] mx-auto bg-white border border-[#eab239] rounded-[14px] py-2 px-3 text-center shadow-inner"
                 style="background-image: url('images/Finest-Jewellery/cart-sort-bg.png'); background-size: cover; background-position: top-center;">
                 <h3 class="playfair-font font-bold text-[17px] sm:text-[19px] text-[#7a131b] tracking-wide">
                   Store Appointment
                 </h3>
+                <span class="absolute bottom-0 right-0  h-10 w-10 z-50 "
+                  style="background-image: url('images/Finest-Jewellery/golden-dot-bg.png'); background-size: cover; background-position: top-center;">
+                </span>
+                <span class="absolute top-0 left-0 rotate-[179deg] h-10 w-10 z-50  "
+                  style="background-image: url('images/Finest-Jewellery/golden-dot-bg.png'); background-size: cover; background-position: top-center;">
+                </span>
               </div>
             </div>
             <!-- Top Floating Icon Badge -->
             <div
-              class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-20 sm:h-20 rounded-br-3xl rounded-tl-3xl bg-gradient-to-b from-[#fbead0] via-[#f7dab3] to-[#ebd1a4] border-2 border-[#f1c165] shadow-[0_8px_20px_rgba(0,0,0,0.18)] flex items-center justify-center">
+              class="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-20 sm:h-20 rounded-br-3xl rounded-tl-3xl bg-[#d69f42] border-2 border-[#f1c165] shadow-[0_8px_20px_rgba(0,0,0,0.18)] flex items-center justify-center">
               <div class="w-10 h-10 sm:w-12 sm:h-12 text-[#7a131b] no-repeat bg-cover bg-center text-xl sm:text-2xl"
                 style="background-image: url('images/Finest-Jewellery/4.png');"></div>
             </div>
@@ -2500,7 +2659,7 @@
 
               <div class="swiper-slide">
                 <div
-                  class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('/images/Testimonials/templet1.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
+                  class="relative mx-auto h-[300px] w-full max-w-[350px] flex-col items-center bg-[url('images/Testimonials/templet1.png')] bg-contain bg-center bg-no-repeat px-7 pt-[70px] pb-5 text-center">
 
                   <div class="absolute left-1/2 top-[16px] z-30 h-[70px] w-[160px] -translate-x-1/2">
                     <img src="/images/Testimonials/hulf-surkel.png" alt="Half Circle"
@@ -2520,7 +2679,7 @@
                   </div>
 
                   <p
-                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    class="raleway-font absolute bottom-28 right-12 md:right-16 lg:right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
                     "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
                     special and luxurious."
                   </p>
@@ -2565,7 +2724,7 @@
                   </div>
 
                   <p
-                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    class="raleway-font absolute bottom-28 right-12 md:right-16 lg:right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
                     "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
                     special and luxurious."
                   </p>
@@ -2576,7 +2735,7 @@
                   </div>
 
                   <h3
-                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] z-20 text-xl leading-[1.45]">
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] md:left-[6.5rem] lg:left-[7rem] z-20 text-xl leading-[1.45]">
                     Riya Mukherjee
                   </h3>
 
@@ -2609,7 +2768,7 @@
                   </div>
 
                   <p
-                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    class="raleway-font absolute bottom-28 right-12 md:right-16 lg:right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
                     "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
                     special and luxurious."
                   </p>
@@ -2620,7 +2779,7 @@
                   </div>
 
                   <h3
-                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[7.5rem] z-20 text-xl leading-[1.45]">
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[7.5rem] lg:left-[7.5rem] z-20 text-xl leading-[1.45]">
                     Ananya Sen
                   </h3>
 
@@ -2654,7 +2813,7 @@
                   </div>
 
                   <p
-                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    class="raleway-font absolute bottom-28 right-12 md:right-16 lg:right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
                     "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
                     special and luxurious."
                   </p>
@@ -2665,7 +2824,7 @@
                   </div>
 
                   <h3
-                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] z-20 text-xl leading-[1.45]">
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] md:left-[6.5rem] lg:left-[7rem] z-20 text-xl leading-[1.45]">
                     Riya Mukherjee
                   </h3>
 
@@ -2699,7 +2858,7 @@
                   </div>
 
                   <p
-                    class="raleway-font absolute bottom-28 right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
+                    class="raleway-font absolute bottom-28 right-12 md:right-16 lg:right-20 z-20 max-w-52 text-[12.5px] leading-[1.45] text-[#333]">
                     "Puspam Jewellery beautifully blends timeless elegance with modern design. Every piece feels truly
                     special and luxurious."
                   </p>
@@ -2710,7 +2869,7 @@
                   </div>
 
                   <h3
-                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] z-20 text-xl leading-[1.45]">
+                    class="text-[#951416] font-semibold my-2 absolute bottom-16 left-[6rem] md:left-[6.5rem] lg:left-[7rem] z-20 text-xl leading-[1.45]">
                     Arjun Chatterjee
                   </h3>
 
@@ -2741,7 +2900,7 @@
         <script>
           document.addEventListener("DOMContentLoaded", function () {
             new Swiper('#testimonials-section .testimonialsSwiper', {
-              slidesPerView:1 ,     /* 1 cards visible on mobile devices */
+              slidesPerView: 1,     /* 1 cards visible on mobile devices */
               slidesPerGroup: 1,    /* Shifts 1 card per arrow click */
               spaceBetween: 20,
               loop: true,           /* Enables infinite loop */
@@ -2768,13 +2927,6 @@
 
       </div>
 
-      <!-- Slider Pagination Dots
-      <div class="flex items-center justify-center gap-3 ">
-        <span class="w-3 h-3 rounded-full bg-[#f1c165] cursor-pointer"></span>
-        <span class="w-3.5 h-3.5 rounded-full bg-[#82141e] cursor-pointer shadow-md"></span>
-        <span class="w-3 h-3 rounded-full bg-[#f1c165] cursor-pointer"></span>
-        <span class="w-3 h-3 rounded-full bg-[#f1c165]/60 cursor-pointer"></span>
-      </div> -->
 
       </div>
 
@@ -2783,9 +2935,11 @@
     <section id="blog-carousel-section" class="w-full relative select-none py-10 overflow-hidden ">
 
       <!-- Background Image adjusted to cover only the top 70% of the section -->
-      <div
-        class="absolute top-0 left-0 w-full h-[70%] bg-[url('/images/blgo/blog-bg1.png')] bg-cover bg-center bg-no-repeat pointer-events-none z-0">
-      </div>
+      <!-- <div "
+        style="background-image:url('') ">
+      </div> -->
+      <img src='/images/blgo/bg.png'
+        class="absolute top-0 left-0 w-full h-[80%]  pointer-events-none z-0 bg-cover bg-center bg-no-repeat ">
 
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
 
@@ -3077,17 +3231,18 @@
 
   </main>
   <!-- MAIN BANNER & TRUST SECTION END -->
- <footer class="">
-    <section class="w-full h-auto lg:h-[31rem] pb-24 lg:pb-0 relative select-none overflow-visible pt-20 md:pt-20 lg:pt-16"
+  <footer class="">
+    <section class="w-full h-auto lg:h-[31rem] relative select-none overflow-visible pt-20 md:pt-20 lg:pt-16"
       style="background-image: url('/images/footer-img/footer-bg.png'); background-size: cover; background-position: center;">
-  
+
       <!-- Top Absolute Image -->
       <div class="absolute top-20 md:top-0 lg:-top-[5.38rem] left-0 w-full pointer-events-none z-20">
         <img src="images/footer-img/footer-top-img.png" alt="Footer Top Border" class="w-full h-auto object-contain">
       </div>
-  
+
       <!-- Logo -->
-      <div class="absolute top-24 md:top-10  lg:top-0 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center pointer-events-auto">
+      <div
+        class="absolute top-24 md:top-10  lg:top-0 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center pointer-events-auto">
         <a href="#"
           class="w-[82px] h-[82px] sm:w-[96px] sm:h-[96px] md:w-[110px] md:h-[110px] rounded-full bg-white shadow-[0_8px_20px_rgba(0,0,0,0.3)] border-[2.5px] border-[#ecd29f] p-2 flex items-center justify-center transition-transform hover:scale-105"
           aria-label="Puspam Jewellers Home">
@@ -3095,11 +3250,11 @@
             class="w-full h-full object-contain">
         </a>
       </div>
-  
+
       <div class="max-w-[1440px] overflow-hidden w-full mx-auto relative z-20 pt-16 md:pt-20 lg:pt-24">
-  
+
         <div class="grid grid-cols-1 px-6 sm:px-10 lg:px-16 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
-  
+
           <!-- Column 1 -->
           <div
             class="lg:col-span-1 hidden md:flex lg:flex flex-col items-start text-left border-b border-[#F1C165]/30 lg:border-b-0 pb-6 lg:pb-0 lg:border-r-2 lg:[border-image:linear-gradient(to_bottom,#2D0105,#F1C165)_1] h-auto lg:h-2/3">
@@ -3118,7 +3273,7 @@
               </a>
             </div>
           </div>
-  
+
           <!-- Column 2 -->
           <div
             class="lg:col-span-1 flex flex-col items-start text-left border-b border-[#F1C165]/30 lg:border-b-0 pb-6 lg:pb-0 lg:border-r-2 lg:[border-image:linear-gradient(to_bottom,#2D0105,#F1C165)_1] h-auto lg:h-2/3">
@@ -3146,7 +3301,7 @@
                   Contact Us</a></li>
             </ul>
           </div>
-  
+
           <!-- Column 3 -->
           <div
             class="lg:col-span-1 flex flex-col items-start text-left border-b border-[#F1C165]/30 lg:border-b-0 pb-6 lg:pb-0 lg:border-r-2 lg:[border-image:linear-gradient(to_bottom,#2D0105,#F1C165)_1] h-auto lg:h-2/3">
@@ -3174,7 +3329,7 @@
                   Mangalsutra</a></li>
             </ul>
           </div>
-  
+
           <!-- Column 4 -->
           <div
             class="lg:col-span-1 flex flex-col items-start text-left border-b border-[#F1C165]/30 lg:border-b-0 pb-6 lg:pb-0 lg:border-r-2 lg:[border-image:linear-gradient(to_bottom,#2D0105,#F1C165)_1] h-auto lg:h-2/3">
@@ -3196,7 +3351,7 @@
                   Return Policy</a></li>
             </ul>
           </div>
-  
+
           <!-- Column 5 -->
           <div class="flex flex-col items-start text-left pb-6 lg:pb-0 h-auto lg:h-2/3">
             <h3 class="playfair-font font-bold text-[17px] sm:text-[18px] text-[#f3d99e] tracking-wider mb-2">
@@ -3240,28 +3395,30 @@
               </li>
             </ul>
           </div>
-  
+
         </div>
-        
+
         <div class="relative w-full mt-8 lg:mt-0">
           <div class="h-auto pointer-events-none ">
-            <img src="images/footer-img/footer-bottom-img.png" alt="Footer Bottom Flavour">
+            <img src="/images/footer-img/footer-bottom-img.png" alt="Footer Bottom Flavour">
           </div>
-          
+
           <!-- Copyright Area (One Line, Responsive) -->
           <div
-            class="absolute left-1/2 -translate-x-1/2 bottom-2 md:bottom-4 w-[96%] sm:w-auto max-w-[900px] bg-gradient-to-r from-[#e7be68] via-[#f7dab3] to-[#e7be68] text-[#1c0003] px-2 py-2 sm:px-6 sm:py-3 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.3)] text-center raleway-font font-medium tracking-wide whitespace-nowrap text-[8.5px] min-[370px]:text-[9.5px] sm:text-[12px] md:text-[13.5px]">
-            © 2026 <span class="text-[#82141e] font-bold">Puspam Jewellery</span>. All Rights Reserved. Design &amp;
-            Developed by <span class="text-[#82141e] font-bold">Insu Creation Pvt. Ltd.</span>
+            class="absolute left-1/2 -translate-x-1/2 bottom-2 md:bottom-4 w-[98%] sm:w-auto max-w-[900px] bg-gradient-to-r from-[#e7be68] via-[#f7dab3] to-[#e7be68] text-[#1c0003] px-2 py-2 sm:px-6 sm:py-3 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.3)] text-center raleway-font md:font-medium md:tracking-wide whitespace-nowrap text-[8.5px] min-[370px] text-sm lg:text-base ">
+            © 2026 <span class="text-[#82141e] font-semibold md:font-bold">Puspam Jewellery</span>. All Rights Reserved.
+            Design &amp;
+            Developed by <span class="text-[#82141e] font-semibold md:font-bold">Insu Creation Pvt. Ltd.</span>
           </div>
         </div>
-  
+
         <!-- Palok (Hidden on sm and md devices) -->
-        <div class="hidden lg:block absolute -top-0 -right-20 w-[150px] sm:w-56 pointer-events-none z-50 rotate-[-65deg]">
+        <div
+          class="hidden lg:block absolute -top-0 -right-20 w-[150px] sm:w-56 pointer-events-none z-50 rotate-[-65deg]">
           <img src="images/About-Jewellery/palok.png" alt="Peacock Feather"
             class="w-full h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.3)]">
         </div>
-  
+
       </div>
     </section>
   </footer>
